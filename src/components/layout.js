@@ -9,6 +9,7 @@ import Imglayer2 from "../images/background/layer-2.png";
 import Imglayer3 from "../images/background/layer-3.png";
 import Imglayer4 from "../images/background/layer-4.png";
 import Imglayer5 from "../images/background/layer-5.png";
+import Footer from "./h31/Footer";
 
 const Layout = ({ children, path = "" }) => {
   return (
@@ -49,6 +50,7 @@ const Layout = ({ children, path = "" }) => {
         />
       )}
       {children}
+      <Footer />
     </>
   );
 };
