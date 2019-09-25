@@ -13,7 +13,9 @@
         ]
       }
     ],
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "react/prop-types": 0,
+    "react/no-danger": 0
   },
   "plugins": [
     "prettier"

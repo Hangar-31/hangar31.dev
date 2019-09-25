@@ -4,10 +4,13 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="" description="" />
-  </Layout>
-);
+const IndexPage = props => {
+  const { path } = props;
+  return (
+    <Layout path={path}>
+      <SEO title="" description="" />
+    </Layout>
+  );
+};
 
 export default IndexPage;

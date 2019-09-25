@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "test-folder",
-        path: `${__dirname}/static/test-folder`
+        name: "static-files",
+        path: `${__dirname}/static`
       }
     },
     // Creates a manifest for the website
@@ -43,12 +43,21 @@ module.exports = {
     },
     // Loads web fonts from Google as specified
     {
-      resolve: "gatsby-plugin-web-font-loader"
-      // options: {
-      //   google: {
-      //     families: []
-      //   },
-      // },
+      resolve: "gatsby-plugin-prefetch-google-fonts",
+      options: {
+        fonts: [
+          {
+            family: `Rajdhani`,
+            subsets: [`latin`],
+            variants: [`bold`]
+          },
+          {
+            family: `Open Sans`,
+            subsets: [`latin`],
+            variants: [`regular`]
+          }
+        ]
+      }
     },
     // Makes field "markdownRemark" queryable
     {
@@ -58,7 +67,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 600
+              maxWidth: 1000
             }
           }
         ]
