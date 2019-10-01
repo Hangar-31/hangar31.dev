@@ -3,18 +3,20 @@ import React from "react";
 import styled from "@emotion/styled";
 
 // Images
-import ImgFooterBackground from "../../images/background/footer-layer-1.png";
 import ImgLogo from "../images/ImgLogo";
-import Link1 from "./base/Link1";
-import Text1 from "./base/Text1";
 
 // Components
+import Link1 from "./base/Link1";
+import Text1 from "./base/Text1";
+import AnimeFooterBackground from "./animations/AnimeFooterBackground";
 
+// Styled Components
 const Container = styled.section`
   position: relative;
+  z-index: 2;
   height: 1000px;
   width: 100%;
-  background: url(${ImgFooterBackground}) no-repeat center top/cover, linear-gradient(180deg, transparent 0%, #49E9FF 100%);
+  background: linear-gradient(180deg, transparent 0vw, transparent 12.3vw,  #FFFFFF 12.31vw, #FFFFFF 16.31vw, transparent 100%);
 `;
 
 const Wrapper = styled.section`
@@ -32,6 +34,9 @@ const Wrapper = styled.section`
 
 export default () => (
   <Container>
+
+    <AnimeFooterBackground />
+
     <Wrapper>
       <ImgLogo cssProp={`
         max-width: 150px;

@@ -52,10 +52,9 @@ export default () => (
       const articles = data.allMarkdownRemark.edges
       return (
         <Container>
-          <>
-            {articles.map(article => (
-              <Link  
-                css={css`
+          {articles.map(article => (
+            <Link  
+              css={css`
                   ${Card} .gatsby-image-wrapper {
                     position: absolute !important;
                     left: 0;
@@ -65,8 +64,8 @@ export default () => (
 
                     width: 100%;
                     height: calc(100% + 4px);
-                    transition: 0.5s;
-                    transition-timing-function: cubic-bezier(0, 0, 0.09, 0.9);
+                    transition: 3s;
+                    transition-timing-function: cubic-bezier(0.05, 0.68, 0, 1.01);
                   }
                   &:hover {
                     > ${Card} .gatsby-image-wrapper {
@@ -74,14 +73,13 @@ export default () => (
                     }
                   }
                 `}
-                to={article.node.fields.slug}
-              >
-                <Card key={article.node.id}>
-                  <Img fluid={article.node.frontmatter.image.childImageSharp.fluid} />
-                </Card>
-              </Link>
+              to={article.node.fields.slug}
+            >
+              <Card key={article.node.id}>
+                <Img fluid={article.node.frontmatter.image.childImageSharp.fluid} />
+              </Card>
+            </Link>
             ))}
-          </>
         </Container>
       )
     })}
