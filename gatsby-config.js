@@ -3,13 +3,7 @@ module.exports = {
     title: "[]",
     description: "[]",
     author: "[]",
-    siteurl: "[]",
-    social: [
-      {
-        name: "facebook",
-        url: "[]"
-      }
-    ]
+    siteUrl: "https://hangar31testing.netlify.com/"
   },
   plugins: [
     // Images Folder Sourcing
