@@ -57,7 +57,7 @@ export default ({ path }) => (
               delay: path ==="/" ? 1.5 : 0.5
             }}
             exit={{
-              length: path ==="/" ? 2: 1
+              length: path ==="/" ? 2: 0.5
             }}
           >
             {link.name}
