@@ -23,6 +23,8 @@ const Layout = ({ children, path = "" }) => {
 
       <MainNav path={path} />
 
+      {console.log(path)}
+
       <div
         css={css`
           position: relative;
