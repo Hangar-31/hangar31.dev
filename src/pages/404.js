@@ -2,13 +2,13 @@
 import React from "react";
 
 // Components
-import Layout from "../components/layout";
 import SEO from "../components/seo";
+import PageWrapperFade from "../components/h31/PageWrapperFade";
 
 const NotFoundPage = () => (
-  <Layout>
+  <PageWrapperFade>
     <SEO title="" description="" />
-  </Layout>
+  </PageWrapperFade>
 );
 
 export default NotFoundPage;

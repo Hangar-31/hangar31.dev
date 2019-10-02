@@ -6,14 +6,14 @@ import SEO from "../components/seo";
 import PageWrapperFade from "../components/h31/PageWrapperFade";
 import SectionTitle from "../components/h31/SectionTitle";
 
-const IndexPage = () => {
+const ProcessPage = () => {
   return (
     <PageWrapperFade>
       <SEO title="" description="" />
 
-      <SectionTitle title="Aboard" subtitle="Welcome" />
+      <SectionTitle title="Process" subtitle="The" />
     </PageWrapperFade>
   );
 };
 
-export default IndexPage;
+export default ProcessPage;

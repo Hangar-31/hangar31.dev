@@ -1,20 +1,21 @@
 import React from "react";
 
 // Components
-import Layout from "../components/layout";
+// import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ClientCards from "../components/h31/ClientCards";
 import SectionTitle from "../components/h31/SectionTitle";
+import PageWrapperFade from "../components/h31/PageWrapperFade";
 
-const IndexPage = () => {
+const WebsitesPage = () => {
   return (
-    <Layout>
+    <PageWrapperFade>
       <SEO title="" description="" />
 
-      <SectionTitle title="Websites" subtitle="About" />
+      <SectionTitle title="Websites" subtitle="Our" />
       <ClientCards />
-    </Layout>
+    </PageWrapperFade>
   );
 };
 
-export default IndexPage;
+export default WebsitesPage;

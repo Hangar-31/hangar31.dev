@@ -73,6 +73,14 @@ module.exports = {
         ]
       }
     },
+    // Transition Animation Link Component
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/layout.js`)
+      }
+    },
+
     // Emotion plugin for Gatsby
     `gatsby-plugin-emotion`,
 

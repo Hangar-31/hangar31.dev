@@ -6,7 +6,6 @@ import styled from "@emotion/styled";
 import ImgLogo from "../images/ImgLogo";
 
 // Components
-import Link1 from "./base/Link1";
 import Text1 from "./base/Text1";
 import AnimeFooterBackground from "./animations/AnimeFooterBackground";
 
@@ -46,7 +45,6 @@ export default () => (
       <Text1>
         HANGAR 31 LLC - COPYRIGHT © 2019
       </Text1>
-      <Link1 />
     </Wrapper>
   </Container>
 );
