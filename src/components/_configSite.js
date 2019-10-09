@@ -1,12 +1,12 @@
 export default {
   // Colors
-  colorPrimary: "#E4D9CC",
+  colorPrimary: "#0094D1",
   colorSecondary: "#FB6542",
+  colorTertiary: "#216789",
+  colorQuintery: "#00bedb",
+  colorOffWhite: "#777777",
   colorWhite: "#ffffff",
-  colorGrey: "#4A4A4A",
-  colorButtonGrey: "#3A3A3D",
-  colorCharcoalBlack: "#222224",
-  colorBlack: "#000000",
+  colorBlack: "#313131",
 
   // Font Families
   fontPrimary: "Rajdhani",

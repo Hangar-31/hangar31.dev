@@ -3,9 +3,9 @@ import React from "react";
 // Components
 // import Layout from "../components/layout";
 import SEO from "../components/seo";
-import ClientCards from "../components/h31/ClientCards";
-import SectionTitle from "../components/h31/SectionTitle";
-import PageWrapperFade from "../components/h31/PageWrapperFade";
+import WebsiteCards from "../components/h31/sections/WebsiteCards";
+import SectionTitle from "../components/h31/sections/SectionTitle";
+import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
 
 const WebsitesPage = () => {
   return (
@@ -13,7 +13,7 @@ const WebsitesPage = () => {
       <SEO title="" description="" />
 
       <SectionTitle title="Websites" subtitle="Our" />
-      <ClientCards />
+      <WebsiteCards />
     </PageWrapperFade>
   );
 };

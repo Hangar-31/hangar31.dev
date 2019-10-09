@@ -8,34 +8,24 @@ import _configSite from "../../_configSite";
 
 export default styled(TransitionLink)`
   ${_configBase}
+  padding: 10px 15px;
+
+  border: 1px solid #ffffff;
+  border-radius: 8px;
 
   position: relative;
   color: ${_configSite.colorWhite};
   line-height: 1;
+
   font-size: 1.25rem;
   font-family: ${_configSite.fontSecondary};
   font-weight: light;
   text-decoration: none;
 
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-
-    width: 0%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    background: ${_configSite.colorWhite};
-    transition: 0.2s ease;
-  }
+  transition: 0.2s;
 
   &:hover {
-    &:after {
-      width: 100%;
-    }
+    background: #ffffff;
+    color: #069bd5;
   }
 `;

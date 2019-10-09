@@ -3,15 +3,19 @@ import React from "react";
 // Components
 // import Layout from "../components/layout";
 import SEO from "../components/seo";
-import PageWrapperFade from "../components/h31/PageWrapperFade";
-import SectionTitle from "../components/h31/SectionTitle";
+import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
+import SectionTitle from "../components/h31/sections/SectionTitle";
+import Processes from "../components/h31/sections/Processes";
+import RequestConsultation from "../components/h31/sections/RequestConsultation";
 
 const ProcessPage = () => {
   return (
     <PageWrapperFade>
       <SEO title="" description="" />
 
-      <SectionTitle title="Process" subtitle="The" />
+      <SectionTitle title="Our Process" subtitle="About" />
+      <Processes />
+      <RequestConsultation />
     </PageWrapperFade>
   );
 };

@@ -4,9 +4,9 @@ import React from "react";
 import { Global, css } from "@emotion/core";
 
 // Components
-import MainNav from "./h31/MainNav";
+import MainNav from "./h31/sections/MainNav";
 import AnimeSiteBackground from "./h31/animations/AnimeSiteBackground";
-import Footer from "./h31/Footer";
+import Footer from "./h31/sections/Footer";
 
 const Layout = ({ children, path = "" }) => {
   return (
@@ -18,25 +18,28 @@ const Layout = ({ children, path = "" }) => {
             min-height: 100vh;
             background: linear-gradient(180deg, #0094d1 0%, #49e9ff 100%);
           }
+          .tl-edges {
+            overflow-x: visible;
+          }
+          .tl-wrapper {
+            float: none;
+          }
         `}
       />
 
       <MainNav path={path} />
-
-      {console.log(path)}
 
       <div
         css={css`
           position: relative;
           min-height: 500px;
           background: linear-gradient(
-            transparent 0,
-            transparent 3vw,
+            rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, 0.8) 5.5vw,
             rgba(255, 255, 255, 0.6) 100%
           );
           margin-top: ${path === "/" ? "30vw" : "0"};
-          padding-top: 250px;
+          padding-top: ${path === "/" ? "0px" : "250px"};
           padding-bottom: 12vw;
           margin-bottom: -11vw;
           transition: 1.5s ease-in-out;

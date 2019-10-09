@@ -3,8 +3,8 @@ import React from "react";
 import styled from "@emotion/styled";
 
 // Components
-import Title1 from "./base/Title1";
-import Subtitle1 from "./base/Subtitle1";
+import Title1 from "../base/Title1";
+import Subtitle1 from "../base/Subtitle1";
 
 const Container = styled.section`
   display: flex;

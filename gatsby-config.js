@@ -43,7 +43,7 @@ module.exports = {
           {
             family: `Rajdhani`,
             subsets: [`latin`],
-            variants: [`bold`]
+            variants: [`bold`, `regular`, `light`]
           },
           {
             family: `Open Sans`,

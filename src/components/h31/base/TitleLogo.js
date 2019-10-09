@@ -5,12 +5,12 @@ import _configSite from "../../_configSite";
 
 export default styled.p`
   ${_configBase}
-  margin-bottom: 30px;
 
-  line-height: 2;
-  font-size: 1rem;
-  font-family: ${_configSite.fontSecondary};
-  font-weight: lighter;
+  line-height: 1;
+  font-size: 1.5rem;
+  font-family: ${_configSite.fontPrimary};
+  font-weight: regular;
+  text-transform: uppercase;
 
-  color: ${_configSite.colorBlack};
+  color: ${_configSite.colorWhite};
 `;

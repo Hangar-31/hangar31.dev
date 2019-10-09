@@ -2,7 +2,7 @@ import React from "react";
 import { css, keyframes } from "@emotion/core";
 
 // Components
-import ImgFullContainer from "../ImgFullContainer";
+import ImgFullContainer from "../base/ImgFullContainer";
 
 // Images
 import ImgFooterLayer1 from "../../images/background/ImgFooterLayer1";

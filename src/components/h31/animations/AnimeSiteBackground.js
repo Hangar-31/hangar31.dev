@@ -3,7 +3,7 @@ import { css, keyframes } from "@emotion/core";
 import styled from "@emotion/styled";
 
 // Components
-import ImgFullContainer from "../ImgFullContainer";
+import ImgFullContainer from "../base/ImgFullContainer";
 
 // Images
 import ImgLayer1 from "../../images/background/ImgLayer1";

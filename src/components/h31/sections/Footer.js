@@ -3,11 +3,11 @@ import React from "react";
 import styled from "@emotion/styled";
 
 // Images
-import ImgLogo from "../images/ImgLogo";
+import ImgLogo from "../../images/ImgLogo";
 
 // Components
-import Text1 from "./base/Text1";
-import AnimeFooterBackground from "./animations/AnimeFooterBackground";
+import Text1 from "../base/Text1";
+import AnimeFooterBackground from "../animations/AnimeFooterBackground";
 
 // Styled Components
 const Container = styled.section`
