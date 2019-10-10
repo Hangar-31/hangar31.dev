@@ -54,7 +54,6 @@ export default ({ path }) => (
     <Container
       css={css`
         height: 1200px;
-        width: 100%;
         background: transparent;
       `}
     >

@@ -13,8 +13,8 @@ export default () => (
   <Container
     css={css`
       background: linear-gradient(180deg, rgba(221, 235, 247, 0.68) 0%, #E6EEF5 95.83%);
-      padding-bottom: 3vw;
-      margin-bottom: -11vw;
+      padding-bottom: 125px;
+      margin-bottom: -230px;
     `}
   >
     <Wrapper
