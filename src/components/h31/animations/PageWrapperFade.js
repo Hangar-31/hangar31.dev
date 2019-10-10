@@ -19,7 +19,6 @@ export default ({ children }) => (
             : "hidden"
         }
       >
-        {console.log(transitionStatus)}
         {children}
       </Fade>
     )}

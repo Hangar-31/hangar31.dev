@@ -6,7 +6,6 @@ import SEO from "../components/seo";
 import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
 import SectionTitle from "../components/h31/sections/SectionTitle";
 import Processes from "../components/h31/sections/Processes";
-import RequestConsultation from "../components/h31/sections/RequestConsultation";
 
 const ProcessPage = () => {
   return (
@@ -15,7 +14,6 @@ const ProcessPage = () => {
 
       <SectionTitle title="Our Process" subtitle="About" />
       <Processes />
-      <RequestConsultation />
     </PageWrapperFade>
   );
 };

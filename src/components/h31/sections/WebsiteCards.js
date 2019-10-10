@@ -4,16 +4,18 @@ import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
+import Container from "../layouts/Container";
+import Wrapper from "../layouts/Wrapper";
 
-const Container = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+// const Container = styled.section`
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-gap: 15px;
 
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 15px 0;
-`;
+//   max-width: 992px;
+//   margin: 0 auto;
+//   padding: 15px 0;
+// `;
 
 const Card = styled.article`
   position: relative;
@@ -52,9 +54,19 @@ export default () => (
       const articles = data.allMarkdownRemark.edges
       return (
         <Container>
-          {articles.map(article => (
-            <Link  
-              css={css`
+          <Wrapper
+            css={css`
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-gap: 15px;
+
+              padding-top: 30px;
+              max-width: 992px;
+            `}
+          >
+            {articles.map(article => (
+              <Link  
+                css={css`
                   ${Card} .gatsby-image-wrapper {
                     position: absolute !important;
                     left: 0;
@@ -73,13 +85,14 @@ export default () => (
                     }
                   }
                 `}
-              to={article.node.fields.slug}
-            >
-              <Card key={article.node.id}>
-                <Img fluid={article.node.frontmatter.image.childImageSharp.fluid} />
-              </Card>
-            </Link>
+                to={article.node.fields.slug}
+              >
+                <Card key={article.node.id}>
+                  <Img fluid={article.node.frontmatter.image.childImageSharp.fluid} />
+                </Card>
+              </Link>
             ))}
+          </Wrapper>
         </Container>
       )
     })}

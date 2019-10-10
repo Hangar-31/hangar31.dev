@@ -18,13 +18,6 @@ import ImgProcessDevelop from "../../images/processes/ImgProcessDevelop";
 import ImgProcessDeploy from "../../images/processes/ImgProcessDeploy";
 
 // Styled Components
-const Process = styled.section`
-  margin-bottom: 120px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-`
-
 const Content = styled.section`
   display: grid;
   grid-column-gap: 60px;
@@ -33,6 +26,37 @@ const Content = styled.section`
 
 const Title3Large = styled(Title3)`
   font-size: 2.25rem;
+`
+
+const Process = styled.section`
+  margin-bottom: 200px;
+
+  ${Text1} {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  ${ImgContainer} {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  &:nth-of-type(even) {
+    ${Content} {
+      grid-template-columns: 1fr 2fr;
+    }
+    ${Title3Large} {
+      grid-row: 1;
+      grid-column: 2;
+    }
+    ${Text1} {
+      grid-row: 2;
+      grid-column: 2;
+    }
+    ${ImgContainer} {
+      grid-row: 2;
+      grid-column: 1;
+    }
+  }
 `
 
 // Data
@@ -66,13 +90,13 @@ export default () => (
         max-width: 992px;
       `}
     >
-      {processes.map(process => (
+      {processes.map((process) => (
         <Process>
-          <Title3Large>
-            {process.title}
-          </Title3Large>
-
           <Content>
+            <Title3Large>
+              {process.title}
+            </Title3Large>
+
             <Text1>
               {process.text}
             </Text1>

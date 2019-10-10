@@ -1,5 +1,6 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable no-underscore-dangle */
 import React from "react";
+import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 // Images
@@ -8,43 +9,121 @@ import ImgLogo from "../../images/ImgLogo";
 // Components
 import Text1 from "../base/Text1";
 import AnimeFooterBackground from "../animations/AnimeFooterBackground";
+import RequestConsultation from "./RequestConsultation";
+import Container from "../layouts/Container";
+import Wrapper from "../layouts/Wrapper";
+import FooterLink from "../base/FooterLink";
 
-// Styled Components
-const Container = styled.section`
-  position: relative;
-  z-index: 2;
-  height: 1000px;
+// Config
+import _configSite from "../../_configSite";
+import InquiryForm from "./InquiryForm";
+
+const TopBar = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background: linear-gradient(180deg, transparent 0vw, transparent 12.3vw,  #FFFFFF 12.31vw, #FFFFFF 16.31vw, transparent 100%);
 `;
 
-const Wrapper = styled.section`
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
+const TopBarList = styled.ul`
+  display: flex;
+  list-style: none;
+  padding: 0;
+`;
 
-  display: block;
-  width: 100%;
-  height: 300px;
-  max-width: 1200px;
-`
+const TopBarItem = styled.li`
+  margin-left: 45px;
+`;
 
-export default () => (
-  <Container>
+const BottomBarList = styled.ul`
+  display: flex;
+  list-style: none;
+  padding: 0;
+`;
+const BottomBarItem = styled.li`
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+`;
 
-    <AnimeFooterBackground />
-
-    <Wrapper>
-      <ImgLogo cssProp={`
-        max-width: 150px;
-        margin-bottom: 15px;
+export default ({ path }) => (
+  <>
+    {path.includes("contact") && <InquiryForm />}
+    {!path.includes("contact") && <RequestConsultation />}
+    <Container
+      css={css`
+        height: 1200px;
+        width: 100%;
+        background: transparent;
       `}
-      />
-      <Text1>
-        HANGAR 31 LLC - COPYRIGHT © 2019
-      </Text1>
-    </Wrapper>
-  </Container>
+    >
+      <AnimeFooterBackground />
+
+      <Wrapper
+        css={css`
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        `}
+      >
+        <TopBar>
+          <ImgLogo
+            cssProp={`
+            width: 150px;
+          `}
+          />
+
+          <TopBarList>
+            {_configSite.mainNav.map(link => (
+              <TopBarItem>
+                <FooterLink to={link.to}>{link.name}</FooterLink>
+              </TopBarItem>
+            ))}
+          </TopBarList>
+        </TopBar>
+
+        <BottomBarList>
+          <BottomBarItem>
+            <Text1
+              css={css`
+                color: ${_configSite.colorWhite};
+                text-transform: uppercase;
+              `}
+            >
+              Hangar 31 LLC - Copyright © 2019
+            </Text1>
+          </BottomBarItem>
+
+          <BottomBarItem>
+            <FooterLink
+              cssProp={`
+                ${Text1.__emotion_styles};
+                color: ${_configSite.colorWhite};
+                text-transform: uppercase;
+              `}
+              to="/terms-of-service"
+            >
+              Terms of Service
+            </FooterLink>
+          </BottomBarItem>
+
+          <BottomBarItem>
+            <FooterLink
+              cssProp={`
+                ${Text1.__emotion_styles};
+                color: ${_configSite.colorWhite};
+                text-transform: uppercase;
+              `}
+              to="/privacy-policy"
+            >
+              Privacy
+            </FooterLink>
+          </BottomBarItem>
+        </BottomBarList>
+      </Wrapper>
+    </Container>
+  </>
 );

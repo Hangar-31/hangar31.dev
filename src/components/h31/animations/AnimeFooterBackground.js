@@ -36,20 +36,21 @@ export default () => (
   <>
     <ImgFullContainer
       css={css`
-        top: 10vw;
-        animation: ${layer1Anime} 8s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
-      `}
-    >
-      <ImgFooterLayer1 />
-    </ImgFullContainer>
-
-    <ImgFullContainer
-      css={css`
         top: 0;
         animation: ${layer2Anime} 12s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        pointer-events: none;
       `}
     >
       <ImgFooterLayer2 />
+    </ImgFullContainer>
+    <ImgFullContainer
+      css={css`
+        top: 5vw;
+        animation: ${layer1Anime} 8s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        pointer-events: none;
+      `}
+    >
+      <ImgFooterLayer1 />
     </ImgFullContainer>
   </>
 );

@@ -10,14 +10,19 @@ import Title1 from "../base/Title1";
 import LinkStyled1 from "../base/LinkStyled1";
 
 export default () => (
-  <Container>
+  <Container
+    css={css`
+      background: linear-gradient(180deg, rgba(221, 235, 247, 0.68) 0%, #E6EEF5 95.83%);
+      padding-bottom: 3vw;
+      margin-bottom: -11vw;
+    `}
+  >
     <Wrapper
       css={css`
         display: flex;
         flex-direction: column;
         align-items: center;
         max-width: 992px;
-        padding-bottom: 0;
       `}
     >
       <Title1 css={css`

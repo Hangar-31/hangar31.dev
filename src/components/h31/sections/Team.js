@@ -15,7 +15,6 @@ export default ({ bios }) => (
     <Wrapper
       css={css`
         max-width: 992px;
-        padding-bottom: 0;
       `}
     >
       <Title1 css={css`text-align: center; font-size: 9rem; margin-bottom: 60px;`}>

@@ -6,7 +6,6 @@ import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
 import OurMission from "../components/h31/sections/OurMission";
 import Masthead from "../components/h31/sections/Masthead";
 import WebsitePerks from "../components/h31/sections/WebsitePerks";
-import RequestConsultation from "../components/h31/sections/RequestConsultation";
 
 const IndexPage = () => {
   return (
@@ -16,7 +15,6 @@ const IndexPage = () => {
       <Masthead />
       <OurMission />
       <WebsitePerks />
-      <RequestConsultation />
     </PageWrapperFade>
   );
 };

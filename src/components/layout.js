@@ -34,21 +34,19 @@ const Layout = ({ children, path = "" }) => {
           position: relative;
           min-height: 500px;
           background: linear-gradient(
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.8) 5.5vw,
-            rgba(255, 255, 255, 0.6) 100%
+            rgba(255, 255, 255, 0) 0,
+            rgba(255, 255, 255, 0.82) 4vw,
+            rgba(255, 255, 255, 0.9) 100%
           );
           margin-top: ${path === "/" ? "30vw" : "0"};
           padding-top: ${path === "/" ? "0px" : "250px"};
-          padding-bottom: 12vw;
-          margin-bottom: -11vw;
           transition: 1.5s ease-in-out;
         `}
       >
         <AnimeSiteBackground path={path} />
         {children}
       </div>
-      <Footer />
+      <Footer path={path} />
     </>
   );
 };
