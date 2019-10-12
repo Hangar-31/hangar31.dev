@@ -12,7 +12,7 @@ import LinkStyled1 from "../base/LinkStyled1";
 export default () => (
   <Container
     css={css`
-      background: linear-gradient(180deg, rgba(221, 235, 247, 0.68) 0%, #E6EEF5 95.83%);
+      background: linear-gradient(180deg, #B6ECFA 0%, #E6EEF5 95.83%);
       padding-bottom: 125px;
       margin-bottom: -230px;
     `}

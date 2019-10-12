@@ -9,14 +9,12 @@ import ImgLogo from "../../images/ImgLogo";
 // Components
 import Text1 from "../base/Text1";
 import AnimeFooterBackground from "../animations/AnimeFooterBackground";
-import RequestConsultation from "./RequestConsultation";
 import Container from "../layouts/Container";
 import Wrapper from "../layouts/Wrapper";
 import FooterLink from "../base/FooterLink";
 
 // Config
 import _configSite from "../../_configSite";
-import InquiryForm from "./InquiryForm";
 
 const TopBar = styled.nav`
   display: flex;
@@ -47,12 +45,11 @@ const BottomBarItem = styled.li`
   }
 `;
 
-export default ({ path }) => (
+export default () => (
   <>
-    {path.includes("contact") && <InquiryForm />}
-    {!path.includes("contact") && <RequestConsultation />}
     <Container
       css={css`
+        z-index: 1;
         height: 1200px;
         background: transparent;
       `}

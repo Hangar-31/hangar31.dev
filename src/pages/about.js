@@ -9,6 +9,7 @@ import Team from "../components/h31/sections/Team";
 
 // Images
 import ImgAirplaneWindow from "../components/images/_home/ImgAirplaneWindow";
+import RequestConsultation from "../components/h31/sections/RequestConsultation";
 
 // Data
 const bios = [
@@ -42,6 +43,7 @@ const AboutPage = () => {
       <SectionTitle title="Hangar 31" subtitle="About" />
       <About />
       <Team bios={bios} />
+      <RequestConsultation />
     </PageWrapperFade>
   );
 };
