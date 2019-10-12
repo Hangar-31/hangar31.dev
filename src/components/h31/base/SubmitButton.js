@@ -13,7 +13,6 @@ const Button = styled.button`
   display: inline-block;
 
   background: ${_configSite.colorPrimary};
-  min-width: 150px;
   padding: 10px 8px;
 
   color: ${_configSite.colorWhite};
@@ -68,8 +67,8 @@ export default ({ children }) => (
         z-index: 1;
         border-radius: 5px;
         background: rgba(255, 255, 255, 0.15);
-        min-width: 100px;
-        padding: 5px;
+        min-width: 150px;
+        padding: 15px;
       `}
     >
       {children}

@@ -54,10 +54,12 @@ export default ({ path }) => (
     <WrapperLogo
       to="/"
       entry={{
-        delay: 1.5
+        delay: 1.5,
+        zIndex: 1
       }}
       exit={{
-        length: 2
+        length: 2,
+        zIndex: 1
       }}
     >
       <div
@@ -78,11 +80,14 @@ export default ({ path }) => (
         <ItemLink>
           <MainLink
             to={link.to}
+            activeClassName="current-page"
             entry={{
-              delay: path ==="/" ? 1.5 : 0.5
+              delay: path ==="/" ? 1.5 : 0.5,
+              zIndex: 1
             }}
             exit={{
-              length: path ==="/" ? 2: 0.5
+              length: path ==="/" ? 2: 0.5,
+              zIndex: 1
             }}
           >
             {link.name}
@@ -103,12 +108,14 @@ export default ({ path }) => (
         `}
       >
         <MainLinkButton
-          to="/"
+          to="/free-consultation"
           entry={{
-              delay: path ==="/" ? 1.5 : 0.5
+              delay: path ==="/" ? 1.5 : 0.5,
+              zIndex: 1
             }}
           exit={{
-              length: path ==="/" ? 2: 0.5
+              length: path ==="/" ? 2: 0.5,
+              zIndex: 1
             }}
         >
           Free Consultation

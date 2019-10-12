@@ -28,7 +28,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
           edges {
             node {
               id

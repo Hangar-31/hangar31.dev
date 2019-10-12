@@ -29,6 +29,7 @@ const Form = styled.form`
   display: block;
   width: 100%;
   max-width: 768px;
+  margin: 0 auto;
 `;
 
 const Fieldset = styled.div`
@@ -260,13 +261,15 @@ export default class Form1 extends React.Component {
       submitting
     } = this.state;
 
+    const { formName } = this.props;
+
     return (
       <Form
         ref={form => {
           this.formEl = form;
         }}
         onSubmit={this.onSubmit}
-        name="Inquiry Form"
+        name={formName}
         noValidate
         data-netlify="true"
         netlify-honeypot="bot-field"
@@ -462,7 +465,6 @@ export default class Form1 extends React.Component {
           {/* Submit Button */}
           <P
             css={css`
-              height: 26px;
               grid-column: 4;
               text-align: right;
             `}

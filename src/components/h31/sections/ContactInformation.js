@@ -9,6 +9,7 @@ import Container from "../layouts/Container";
 import Wrapper from "../layouts/Wrapper";
 import Title2 from "../base/Title2";
 import Title4 from "../base/Title4";
+import _configSite from "../../_configSite";
 
 const Grid = styled.section`
   width: 100%;
@@ -66,39 +67,6 @@ const Title2Edited = styled(Title2)`
   font-size: 2rem;
 `
 
-// Data
-const contactData = {
-  hours: [
-    {
-      day: "Monday",
-      start: "9:00am",
-      end: "5:00pm"
-    },
-    {
-      day: "Tuesday",
-      start: "9:00am",
-      end: "5:00pm"
-    },
-    {
-      day: "Wednesday",
-      start: "9:00am",
-      end: "5:00pm"
-    },
-    {
-      day: "Thursday",
-      start: "9:00am",
-      end: "5:00pm"
-    },
-    {
-      day: "Friday",
-      start: "9:00am",
-      end: "5:00pm"
-    }
-  ],
-  phone: "(407) 900-7757",
-  location: "Orlando, FL - New Haven, CT"
-}
-
 export default () => (
   <Container>
     <Wrapper
@@ -114,7 +82,7 @@ export default () => (
         </Title2Edited>
 
         <ListHours>
-          {contactData.hours.map(hour => (
+          {_configSite.hours.map(hour => (
             <ItemHours>
               <TitleDay>
                 {hour.day}
@@ -136,8 +104,8 @@ export default () => (
             Phone
           </Title2Edited>
 
-          <PhoneLink href={`tel:${contactData.phone}`}>
-            {contactData.phone}
+          <PhoneLink href={`tel:${_configSite.phone}`}>
+            {_configSite.phone}
           </PhoneLink>
         </ContainerPhone>
 
@@ -147,7 +115,7 @@ export default () => (
           </Title2Edited>
 
           <Title4>
-            {contactData.location}
+            {_configSite.location}
           </Title4>
         </ContainerLocation>
       </Grid>

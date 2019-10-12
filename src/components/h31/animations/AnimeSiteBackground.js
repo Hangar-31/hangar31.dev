@@ -22,31 +22,25 @@ const Container = styled.section`
 // Keyframes
 const layer1Anime = keyframes`
   0% {
-    transform: translateY(0px);
-  }
-  30% {
-    transform: translateY(10px);
-  }
-  80% {
     transform: translateY(-10px);
   }
+  50% {
+    transform: translateY(10px);
+  }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-10px);
   }
 `;
 
 const layer2Anime = keyframes`
   0% {
-    transform: translateY(0px);
-  }
-  30% {
-    transform: translateY(10px);
-  }
-  80% {
     transform: translateY(-10px);
   }
+  50% {
+    transform: translateY(10px);
+  }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-10px);
   }
 `;
 
@@ -67,25 +61,27 @@ const layer2Anime = keyframes`
 
 const layer4Anime = keyframes`
   0% {
-    transform: translateY(0px);
-  }
-  30% {
-    transform: translateY(14px);
-  }
-  80% {
     transform: translateY(-14px);
   }
+  50% {
+    transform: translateY(14px);
+  }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-14px);
   }
 `;
 
-export default () => (
-  <Container>
+export default ({ path }) => (
+  <Container
+    css={css`
+      transition: 1s;
+      opacity: ${path === "/free-consultation/" ? 0 : 1};
+    `}
+  >
     <ImgFullContainer
       css={css`
         top: 2vw;
-        animation: ${layer4Anime} 8s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        animation: ${layer4Anime} 16s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
         pointer-events: none;
       `}
     >
@@ -94,8 +90,7 @@ export default () => (
 
     <ImgFullContainer
       css={css`
-        top: 0vw;
-        animation: ${layer1Anime} 18s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        animation: ${layer1Anime} 13s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
         pointer-events: none;
       `}
     >
@@ -105,7 +100,7 @@ export default () => (
     <ImgFullContainer
       css={css`
         top: 5vw;
-        animation: ${layer2Anime} 15s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        animation: ${layer2Anime} 10s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
         pointer-events: none;
       `}
     >

@@ -40,7 +40,7 @@ export default () => (
         font-size: 5.5rem;
         `}
         >
-        Inquiry Form
+          Inquiry Form
         </Title1>
 
         <ImgLogo cssProp={`
@@ -49,7 +49,7 @@ export default () => (
         />
       </ContainerTitle>
 
-      <Form1 />
+      <Form1 formName="Inquiry Form - Contact" />
       
     </Wrapper>
   </Container>

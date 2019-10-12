@@ -9,6 +9,11 @@ import AnimeSiteBackground from "./h31/animations/AnimeSiteBackground";
 import Footer from "./h31/sections/Footer";
 
 const Layout = ({ children, path = "" }) => {
+  let layoutPaddingTop = "200px";
+  if (path === "/" || path === "/free-consultation/") {
+    layoutPaddingTop = "0px";
+  }
+
   return (
     <>
       <Global
@@ -24,6 +29,11 @@ const Layout = ({ children, path = "" }) => {
           .tl-wrapper {
             float: none;
           }
+          .current-page {
+            &:after {
+              width: 100% !important;
+            }
+          }
         `}
       />
 
@@ -33,14 +43,28 @@ const Layout = ({ children, path = "" }) => {
         css={css`
           position: relative;
           min-height: 500px;
-          background: linear-gradient(
-            rgba(255, 255, 255, 0) 0,
-            rgba(255, 255, 255, 0.82) 4vw,
-            rgba(255, 255, 255, 0.9) 100%
-          );
           margin-top: ${path === "/" ? "30vw" : "0"};
-          padding-top: ${path === "/" ? "0px" : "250px"};
+          padding-top: ${layoutPaddingTop};
           transition: 1.5s ease-in-out;
+
+          &:after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+            opacity: ${path !== "/free-consultation/" ? "1" : "0"};
+            transition: 1s;
+
+            background: linear-gradient(
+              rgba(255, 255, 255, 0) 0,
+              rgba(255, 255, 255, 0.9) 4vw,
+              rgba(255, 255, 255, 0.8) 100%
+            );
+          }
         `}
       >
         <AnimeSiteBackground path={path} />

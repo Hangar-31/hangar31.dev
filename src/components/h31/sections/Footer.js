@@ -115,7 +115,7 @@ export default () => (
               `}
               to="/privacy-policy"
             >
-              Privacy
+              Privacy Policy
             </FooterLink>
           </BottomBarItem>
         </BottomBarList>

@@ -1,14 +1,12 @@
 import React from "react";
 import { css, keyframes } from "@emotion/core";
 import styled from "@emotion/styled";
-import TransitionLink from "gatsby-plugin-transition-link";
-import Scroll from "react-scroll";
 
 // Configs
 import _configBase from "./_configBase";
 import _configSite from "../../_configSite";
 
-const Link = styled(TransitionLink)`
+const Link = styled.a`
   ${_configBase}
 
   position: relative;
@@ -46,20 +44,9 @@ const animeBreathe = keyframes`
   }
 `;
 
-export default ({ to, children }) => (
+export default ({ href, children }) => (
   <Link
-    to={to}
-    entry={{
-      delay: 1.5
-    }}
-    exit={{
-      length: 2,
-      trigger: () =>
-        Scroll.animateScroll.scrollToTop({
-          smooth: true,
-          duration: 1250
-        })
-    }}
+    href={href}
     css={css`
       &:hover {
         background: ${_configSite.colorQuintery};

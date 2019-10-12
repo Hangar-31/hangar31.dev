@@ -33,5 +33,37 @@ export default {
       name: "Contact",
       to: "/contact"
     }
+  ],
+
+  // Contact Info
+  email: "hello@hangar31development.com",
+  phone: "(407) 900-7757",
+  location: "Orlando, FL - New Haven, CT",
+  hours: [
+    {
+      day: "Monday",
+      start: "9:00am",
+      end: "5:00pm"
+    },
+    {
+      day: "Tuesday",
+      start: "9:00am",
+      end: "5:00pm"
+    },
+    {
+      day: "Wednesday",
+      start: "9:00am",
+      end: "5:00pm"
+    },
+    {
+      day: "Thursday",
+      start: "9:00am",
+      end: "5:00pm"
+    },
+    {
+      day: "Friday",
+      start: "9:00am",
+      end: "5:00pm"
+    }
   ]
 };
