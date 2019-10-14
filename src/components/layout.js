@@ -9,9 +9,9 @@ import AnimeSiteBackground from "./h31/animations/AnimeSiteBackground";
 import Footer from "./h31/sections/Footer";
 
 const Layout = ({ children, path = "" }) => {
-  let layoutPaddingTop = "200px";
+  let layoutPaddingTop = 200;
   if (path === "/" || path === "/free-consultation/") {
-    layoutPaddingTop = "0px";
+    layoutPaddingTop = 0;
   }
 
   return (
@@ -34,6 +34,10 @@ const Layout = ({ children, path = "" }) => {
               width: 100% !important;
             }
           }
+          .current-page-free-consultation {
+            background: #ffffff;
+            color: #069bd5 !important;
+          }
         `}
       />
 
@@ -42,10 +46,18 @@ const Layout = ({ children, path = "" }) => {
       <div
         css={css`
           position: relative;
-          min-height: 500px;
           margin-top: ${path === "/" ? "30vw" : "0"};
-          padding-top: ${layoutPaddingTop};
+          padding-top: ${layoutPaddingTop}px;
           transition: 1.5s ease-in-out;
+
+          @media (max-width: 1280px) {
+            padding-top: ${layoutPaddingTop === 0
+              ? 0
+              : layoutPaddingTop - 75}px;
+          }
+          @media (max-width: 992px) {
+            margin-top: ${path === "/" ? "40vw" : "0"};
+          }
 
           &:after {
             display: block;

@@ -28,6 +28,10 @@ export default () => (
     <Wrapper css={css`
       padding-top: 400px;
       padding-bottom: 275px;
+      @media (max-width: 1280px) {
+        padding-top: 300px;
+        padding-bottom: 225px;
+      }
     `}
     >
       <Grid>

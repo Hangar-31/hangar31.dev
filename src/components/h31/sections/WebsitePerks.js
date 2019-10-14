@@ -27,6 +27,7 @@ const ListPerk = styled.ul`
   grid-row-gap: 60px;
   list-style: none;
   padding: 0;
+  margin: 0;
 `
 
 const ItemPerk = styled.li`
@@ -96,6 +97,7 @@ export default () => (
             {typeof perk.text === "string" && (
               <Text1
                 css={css`
+                  display: inline-block;
                   color: ${_configSite.colorOffWhite};
                 `}
               >

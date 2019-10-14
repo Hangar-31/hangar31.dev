@@ -47,6 +47,9 @@ const ItemLink = styled.li`
   display: flex;
   align-items: center;
   margin: 0 30px;
+  @media (max-width: 1200px) {
+    margin: 0 20px;
+  }
 `
 
 export default ({ path }) => (
@@ -66,6 +69,9 @@ export default ({ path }) => (
         css={css`
           width: 125px;
           margin-right: 45px;
+          @media(max-width: 1100px) {
+            margin-right: 30px;
+          }
         `}
       >
         <ImgLogo />
@@ -96,10 +102,13 @@ export default ({ path }) => (
       ))}
       <ItemLink
         css={css`
-          margin: 0 5px;
           width: 1px;
           height: 22px;
           background: #ffffff;
+          margin: 0 5px;
+          @media(max-width: 1100px) {
+            margin: 0px;
+          }
         `}
       />
       <ItemLink
@@ -109,6 +118,7 @@ export default ({ path }) => (
       >
         <MainLinkButton
           to="/free-consultation"
+          activeClassName="current-page-free-consultation"
           entry={{
               delay: path ==="/" ? 1.5 : 0.5,
               zIndex: 1

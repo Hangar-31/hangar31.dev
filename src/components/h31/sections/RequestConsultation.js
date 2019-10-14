@@ -27,12 +27,18 @@ export default () => (
     >
       <Title1 css={css`
         font-size: 9.435rem;
+        @media (max-width: 1100px) {
+          font-size: 8.25rem;
+        }
       `}
       >
         Request a Free
       </Title1>
       <Title1 css={css`
         font-size: 10.2rem;
+        @media (max-width: 1100px) {
+          font-size: 9rem;
+        }
       `}
       >
         Consultation
@@ -44,6 +50,9 @@ export default () => (
           text-align: justify;
           padding: 0 9px;
           margin-bottom: 60px;
+          @media (max-width: 1100px) {
+            max-width: 856px;
+          }
         `}
       >
         Not sure how to get your website started? Let us help get you on the right path!

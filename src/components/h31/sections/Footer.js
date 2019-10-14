@@ -52,6 +52,9 @@ export default () => (
         z-index: 1;
         height: 1200px;
         background: transparent;
+        @media (max-width: 1440px) {
+          height: 1000px;
+        }
       `}
     >
       <AnimeFooterBackground />
@@ -63,6 +66,9 @@ export default () => (
           left: 0;
           right: 0;
           margin: 0 auto;
+          @media (max-width: 1440px) {
+            padding-bottom: 60px;
+          }
         `}
       >
         <TopBar>

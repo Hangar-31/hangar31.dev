@@ -21,10 +21,15 @@ const Container = styled.section`
 
   height: 30vw;
   width: 100%;
+
+  @media (max-width: 992px) {
+    height: 40vw;
+    transform: translateY(-40vw);
+  }
 `;
 
 const WrapperLogo = styled.section`
-  width: 30%;
+  width: 24%;
   max-width: 350px;
   margin-bottom: 30px;
 `
@@ -37,6 +42,9 @@ export default () => (
     <TitleLogo
       css={css`
         font-size: 2.25rem;
+        @media (max-width: 1366px) {
+          font-size: 2rem;
+        }
       `}
     >
       Website Design & Development

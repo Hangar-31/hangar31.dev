@@ -38,4 +38,11 @@ export default styled(TransitionLink)`
       width: 100%;
     }
   }
+
+  @media (max-width: 1200px) {
+    font-size: 1.125rem;
+  }
+  @media (max-width: 1100px) {
+    font-size: 1rem;
+  }
 `;

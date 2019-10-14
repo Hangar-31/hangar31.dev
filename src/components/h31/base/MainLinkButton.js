@@ -28,4 +28,12 @@ export default styled(TransitionLink)`
     background: #ffffff;
     color: #069bd5;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 1.125rem;
+  }
+  @media (max-width: 1100px) {
+    font-size: 1rem;
+    padding: 7px 11px;
+  }
 `;
