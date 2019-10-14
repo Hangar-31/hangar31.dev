@@ -10,7 +10,7 @@ import Footer from "./h31/sections/Footer";
 import MainNavMobile from "./h31/sections/MainNavMobile";
 
 const Layout = ({ children, path = "" }) => {
-  const excludedPaths = ["/", "/free-consultation/"];
+  const excludedPaths = ["/", "", "/free-consultation/"];
 
   return (
     <>
@@ -45,7 +45,9 @@ const Layout = ({ children, path = "" }) => {
       <div
         css={css`
           position: relative;
-          margin-top: ${path === "/" ? "calc(80vh - 136px)" : "0px"};
+          margin-top: ${excludedPaths.includes(path)
+            ? "calc(80vh - 136px)"
+            : "0px"};
           padding-top: ${excludedPaths.includes(path) ? "0px" : "175px"};
           transition: 1.5s ease-in-out;
 
