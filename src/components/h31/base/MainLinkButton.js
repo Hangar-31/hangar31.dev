@@ -36,4 +36,12 @@ export default styled(TransitionLink)`
     font-size: 1rem;
     padding: 7px 11px;
   }
+  @media (max-width: 992px) {
+    font-size: 2rem;
+    padding: 12px 18px;
+  }
+  @media (max-width: 992px) {
+    font-size: 1.5rem;
+    padding: 8px 14px;
+  }
 `;

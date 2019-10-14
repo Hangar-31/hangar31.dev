@@ -55,13 +55,17 @@ const ContainerForm = styled.div`
   padding: 30px;
 
   box-sizing: border-box;
+
+  @media(max-width: 992px) {
+    grid-column: span 1;
+  }
 `
 
 
 export default () => (
   <Container
     css={css`
-      padding: 60px 0;
+      padding: 0;
       background: linear-gradient(
         rgba(255, 255, 255, 0) 0,
         rgba(255, 255, 255, 0.35) 10%,
@@ -79,12 +83,19 @@ export default () => (
         max-width: 992px;
 
         padding: 60px 30px;
+
+        @media(max-width: 992px) {
+          grid-template-columns: 1fr;
+        }
       `}
     >
       <div>
         <Title1 css={css`
           font-size: 3.5rem;
           margin-bottom: 30px;
+          @media(max-width: 1050px) {
+            font-size: 3rem;
+          }
         `}
         >
         Free Consultation
@@ -94,6 +105,9 @@ export default () => (
           line-height: 1;
           font-size: 2rem;
           margin-bottom: 15px;
+          @media(max-width: 1050px) {
+            font-size: 1.5rem;
+          }
         `}
         >
         Consultation Text

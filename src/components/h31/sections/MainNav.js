@@ -16,12 +16,15 @@ import TitleLogo from "../base/TitleLogo";
 // Styled Components
 const Container = styled.nav`
   z-index: 100;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   padding: ${_config.padding}px;
   max-width: 1440px;
   margin: 0 auto;
+  @media (min-width: 993px) {
+    display: flex
+  }
 `;
 
 const WrapperLogo = styled(TransitionLink)`

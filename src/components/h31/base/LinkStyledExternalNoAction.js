@@ -11,6 +11,7 @@ const Link = styled.a`
 
   position: relative;
   display: inline-block;
+  height: 56px;
 
   background: ${_configSite.colorPrimary};
   padding: 10px 8px;

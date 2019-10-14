@@ -45,4 +45,10 @@ export default styled(TransitionLink)`
   @media (max-width: 1100px) {
     font-size: 1rem;
   }
+  @media (max-width: 992px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+  }
 `;

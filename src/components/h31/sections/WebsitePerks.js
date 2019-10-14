@@ -28,6 +28,14 @@ const ListPerk = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media(max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media(max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const ItemPerk = styled.li`
@@ -99,6 +107,11 @@ export default () => (
                 css={css`
                   display: inline-block;
                   color: ${_configSite.colorOffWhite};
+                  @media(max-width: 700px) {
+                    display: block;
+                    max-width: 500px;
+                    margin: 0 auto;
+                  }
                 `}
               >
                 {perk.text}

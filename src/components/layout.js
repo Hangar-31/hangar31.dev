@@ -7,12 +7,10 @@ import { Global, css } from "@emotion/core";
 import MainNav from "./h31/sections/MainNav";
 import AnimeSiteBackground from "./h31/animations/AnimeSiteBackground";
 import Footer from "./h31/sections/Footer";
+import MainNavMobile from "./h31/sections/MainNavMobile";
 
 const Layout = ({ children, path = "" }) => {
-  let layoutPaddingTop = 200;
-  if (path === "/" || path === "/free-consultation/") {
-    layoutPaddingTop = 0;
-  }
+  const excludedPaths = ["/", "/free-consultation/"];
 
   return (
     <>
@@ -41,23 +39,15 @@ const Layout = ({ children, path = "" }) => {
         `}
       />
 
+      <MainNavMobile path={path} />
       <MainNav path={path} />
 
       <div
         css={css`
           position: relative;
-          margin-top: ${path === "/" ? "30vw" : "0"};
-          padding-top: ${layoutPaddingTop}px;
+          margin-top: ${path === "/" ? "calc(80vh - 136px)" : "0px"};
+          padding-top: ${excludedPaths.includes(path) ? "0px" : "175px"};
           transition: 1.5s ease-in-out;
-
-          @media (max-width: 1280px) {
-            padding-top: ${layoutPaddingTop === 0
-              ? 0
-              : layoutPaddingTop - 75}px;
-          }
-          @media (max-width: 992px) {
-            margin-top: ${path === "/" ? "40vw" : "0"};
-          }
 
           &:after {
             display: block;
@@ -73,9 +63,30 @@ const Layout = ({ children, path = "" }) => {
 
             background: linear-gradient(
               rgba(255, 255, 255, 0) 0,
-              rgba(255, 255, 255, 0.9) 4vw,
+              rgba(255, 255, 255, 0.85) 6vw,
               rgba(255, 255, 255, 0.8) 100%
             );
+          }
+
+          @media (max-width: 992px) {
+            padding-top: ${excludedPaths.includes(path) ? "0px" : "125px"};
+            &:after {
+              background: linear-gradient(
+                rgba(255, 255, 255, 0) 0px,
+                rgba(255, 255, 255, 0.85) 8vw,
+                rgba(255, 255, 255, 0.8) 100%
+              );
+            }
+          }
+
+          @media (max-width: 600px) {
+            &:after {
+              background: linear-gradient(
+                rgba(255, 255, 255, 0) 0,
+                rgba(255, 255, 255, 0.825) 12vw,
+                rgba(255, 255, 255, 0.8) 100%
+              );
+            }
           }
         `}
       >

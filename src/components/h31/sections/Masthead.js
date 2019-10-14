@@ -12,25 +12,21 @@ import TitleLogo from "../base/TitleLogo";
 // Styled Components
 const Container = styled.section`
   position: absolute;
-  transform: translateY(-30vw);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  height: 30vw;
+  
   width: 100%;
-
-  @media (max-width: 992px) {
-    height: 40vw;
-    transform: translateY(-40vw);
-  }
+  height: 300px;
+  
+  transform: translateY(calc(-20vh - 300px));
 `;
 
 const WrapperLogo = styled.section`
   width: 24%;
   max-width: 350px;
+  min-width: 175px;
   margin-bottom: 30px;
 `
 
@@ -44,6 +40,9 @@ export default () => (
         font-size: 2.25rem;
         @media (max-width: 1366px) {
           font-size: 2rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
         }
       `}
     >

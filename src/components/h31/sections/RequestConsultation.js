@@ -13,8 +13,8 @@ export default () => (
   <Container
     css={css`
       background: linear-gradient(180deg, #B6ECFA 0%, #E6EEF5 95.83%);
-      padding-bottom: 125px;
-      margin-bottom: -230px;
+      padding-bottom: 5vw;
+      margin-bottom: -10vw;
     `}
   >
     <Wrapper
@@ -30,6 +30,12 @@ export default () => (
         @media (max-width: 1100px) {
           font-size: 8.25rem;
         }
+        @media (max-width: 930px) {
+          font-size: 6rem;
+        }
+        @media (max-width: 700px) {
+          font-size: 4rem;
+        }
       `}
       >
         Request a Free
@@ -38,6 +44,12 @@ export default () => (
         font-size: 10.2rem;
         @media (max-width: 1100px) {
           font-size: 9rem;
+        }
+        @media (max-width: 930px) {
+          font-size: 6.5rem;
+        }
+        @media (max-width: 700px) {
+          font-size: 4.34rem;
         }
       `}
       >
@@ -52,6 +64,14 @@ export default () => (
           margin-bottom: 60px;
           @media (max-width: 1100px) {
             max-width: 856px;
+          }
+          @media (max-width: 930px) {
+            max-width: 620px;
+            font-size: 1.5rem;
+          }
+          @media (max-width: 700px) {
+            max-width: 410px;
+            font-size: 1rem;
           }
         `}
       >
