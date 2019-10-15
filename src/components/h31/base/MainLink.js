@@ -47,6 +47,11 @@ export default styled(TransitionLink)`
   }
   @media (max-width: 992px) {
     font-size: 2rem;
+    &:hover {
+      &:after {
+        width: 0%;
+      }
+    }
   }
   @media (max-width: 700px) {
     font-size: 1.5rem;

@@ -13,4 +13,14 @@ export default styled.h3`
 
   text-transform: uppercase;
   color: ${_configSite.colorTertiary};
+
+  @media (max-width: 1100px) {
+    font-size: 1.25rem;
+  }
+  @media (max-width: 880px) {
+    font-size: 1.125rem;
+  }
+  @media (max-width: 630px) {
+    font-size: 1rem;
+  }
 `;

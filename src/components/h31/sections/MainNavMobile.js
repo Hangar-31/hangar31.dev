@@ -23,6 +23,10 @@ const MobileContainer = styled.div`
   @media (max-width: 992px) {
     display: flex;
   }
+  @media (max-width: 600px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 const MobileButtonOpen = styled.button`
@@ -30,6 +34,8 @@ const MobileButtonOpen = styled.button`
   height: 40px;
   padding: 0;
   margin: 0;
+  border: none;
+  background: none;
 `;
 
 const MobileButtonClose = styled.button`
@@ -40,6 +46,13 @@ const MobileButtonClose = styled.button`
   height: 40px;
   padding: 0 0 0 5px;
   margin: 0;
+  border: none;
+  background: none;
+
+  @media (max-width: 600px) {
+    top: 15px;
+    right: 15px;
+  }
 `;
 
 const Container = styled.nav`
@@ -84,7 +97,7 @@ const ListLinks = styled.ul`
   padding: 0;
   margin: 90px 0 0 0;
   @media (max-width: 700px) {
-    margin: 120px 0 0 0;
+    margin: 30px 0 0 0;
   }
 `;
 
@@ -97,13 +110,28 @@ const ItemLink = styled.li`
 const ContainerClouds = styled.div`
   position: absolute;
   width: 100vw;
-  height: 30vh;
+  height: 25vh;
   bottom: 0;
   background: linear-gradient(
     rgba(255, 255, 255, 0) 0,
-    rgba(255, 255, 255, 0.85) 4vw,
+    rgba(255, 255, 255, 0.85) 6vw,
     rgba(255, 255, 255, 0.8) 100%
   );
+
+  @media (max-width: 992px) {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0) 0px,
+      rgba(255, 255, 255, 0.85) 8vw,
+      rgba(255, 255, 255, 0.8) 100%
+    );
+  }
+  @media (max-width: 600px) {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.825) 12vw,
+      rgba(255, 255, 255, 0.8) 100%
+    );
+  }
 `;
 
 export default class extends React.Component {
@@ -203,6 +231,8 @@ export default class extends React.Component {
                 }
                 @media (max-width: 600px) {
                   width: 75px;
+                  top: 15px;
+                  left: 15px;
                 }
               `}
             >

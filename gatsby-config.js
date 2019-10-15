@@ -98,6 +98,9 @@ module.exports = {
     "gatsby-plugin-sharp",
 
     // Gatsby Plugin for linting -- Using AirBNB
-    "gatsby-plugin-eslint"
+    "gatsby-plugin-eslint",
+
+    // Remove the trailing slashes from pathing
+    "gatsby-plugin-remove-trailing-slashes"
   ]
 };

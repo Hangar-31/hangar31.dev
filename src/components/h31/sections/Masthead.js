@@ -18,9 +18,9 @@ const Container = styled.section`
   justify-content: center;
   
   width: 100%;
-  height: 300px;
+  height: calc(80vh - 100px);
   
-  transform: translateY(calc(-20vh - 300px));
+  transform: translateY(calc(-80vh + 100px));
 `;
 
 const WrapperLogo = styled.section`

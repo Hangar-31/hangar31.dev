@@ -17,4 +17,14 @@ export default styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #00bedb;
+
+  @media (max-width: 1100px) {
+    font-size: 9rem;
+  }
+  @media (max-width: 880px) {
+    font-size: 7rem;
+  }
+  @media (max-width: 630px) {
+    font-size: 4rem;
+  }
 `;
