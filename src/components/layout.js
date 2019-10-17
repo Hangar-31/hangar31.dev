@@ -9,8 +9,11 @@ import AnimeSiteBackground from "./h31/animations/AnimeSiteBackground";
 import Footer from "./h31/sections/Footer";
 import MainNavMobile from "./h31/sections/MainNavMobile";
 
+// Config
+import _configSite from "./_configSite";
+
 const Layout = ({ children, path = "/" }) => {
-  const excludedPaths = ["/", "", "/free-consultation/"];
+  const excludedPaths = ["/", "", "/free-consultation"];
 
   return (
     <>
@@ -58,7 +61,7 @@ const Layout = ({ children, path = "/" }) => {
             height: 100%;
             width: 100%;
 
-            opacity: ${path !== "/free-consultation/" ? "1" : "0"};
+            opacity: ${path !== "/free-consultation" ? "1" : "0"};
             transition: 1s;
 
             background: linear-gradient(
@@ -68,7 +71,7 @@ const Layout = ({ children, path = "/" }) => {
             );
           }
 
-          @media (max-width: 992px) {
+          @media (max-width: ${_configSite.md}px) {
             padding-top: ${excludedPaths.includes(path) ? "0px" : "125px"};
             &:after {
               background: linear-gradient(
@@ -79,7 +82,7 @@ const Layout = ({ children, path = "/" }) => {
             }
           }
 
-          @media (max-width: 600px) {
+          @media (max-width: ${_configSite.xs}px) {
             &:after {
               background: linear-gradient(
                 rgba(255, 255, 255, 0) 0,

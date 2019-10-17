@@ -19,7 +19,7 @@ import Wrapper from "../layouts/Wrapper";
 
 const Card = styled.article`
   position: relative;
-  height: 370px;
+  height: 500px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   overflow: hidden;
 `;
@@ -54,19 +54,11 @@ export default () => (
       const articles = data.allMarkdownRemark.edges
       return (
         <Container>
-          <Wrapper
-            css={css`
-              display: grid;
-              grid-template-columns: 1fr 1fr 1fr;
-              grid-gap: 15px;
-
-              padding-top: 30px;
-              max-width: 992px;
-            `}
-          >
+          <Wrapper>
             {articles.map(article => (
               <Link  
                 css={css`
+                  grid-column: span 4;
                   ${Card} .gatsby-image-wrapper {
                     position: absolute !important;
                     left: 0;

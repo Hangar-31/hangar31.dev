@@ -18,7 +18,7 @@ const Link = styled(TransitionLink)`
   padding: 10px 8px;
 
   color: ${_configSite.colorWhite};
-  line-height: 1;
+  line-height: 0;
   font-size: 1.625rem;
   font-family: ${_configSite.fontPrimary};
   font-weight: bold;
@@ -27,6 +27,9 @@ const Link = styled(TransitionLink)`
 
   text-align: center;
 
+  @media (max-width: ${_configSite.md}px) {
+    font-size: 1.375rem;
+  }
   * {
     transition: 1s;
   }
@@ -81,7 +84,10 @@ export default ({ to, children }) => (
         border-radius: 5px;
         background: rgba(255, 255, 255, 0.15);
         min-width: 100px;
-        padding: 15px;
+        padding: 30px;
+        @media (max-width: ${_configSite.md}px) {
+          padding: 25px;
+        }
       `}
     >
       {children}

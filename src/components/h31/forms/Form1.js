@@ -10,6 +10,7 @@ import ImgDownCarrot from "../../images/accents/down-carrot.svg";
 // Components
 import SubmitButton from "../base/SubmitButton";
 import Text1 from "../base/Text1";
+import _configSite from "../../_configSite";
 
 // Shared CSS
 const focusCSS = `
@@ -28,21 +29,31 @@ const focusCSS = `
 const Form = styled.form`
   display: block;
   width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
+  grid-column: 3 / span 8;
+  @media (max-width: ${_configSite.md}px) {
+    grid-column: 2 / span 10;
+  }
+  @media (max-width: ${_configSite.sm}px) {
+    grid-column: 1 / span 12;
+  }
 `;
 
 const Fieldset = styled.div`
   display: grid;
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
+  grid-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media (max-width: ${_configSite.sm}px) {
+    grid-gap: 15px;
+  }
 `;
 
 const P = styled.p`
   position: relative;
   margin: 0;
   padding: 0;
+  @media (max-width: ${_configSite.xs}px) {
+    grid-column: 1 / span 12;
+  }
 `;
 
 const Label = styled.label`
@@ -465,7 +476,7 @@ export default class Form1 extends React.Component {
           {/* Submit Button */}
           <P
             css={css`
-              grid-column: 4;
+              grid-column: 1 / span 4;
               text-align: right;
             `}
           >

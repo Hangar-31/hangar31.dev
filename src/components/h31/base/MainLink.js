@@ -39,21 +39,21 @@ export default styled(TransitionLink)`
     }
   }
 
-  @media (max-width: 1200px) {
-    font-size: 1.125rem;
-  }
-  @media (max-width: 1100px) {
+  @media (max-width: ${_configSite.lg}px) {
     font-size: 1rem;
   }
-  @media (max-width: 992px) {
-    font-size: 2rem;
+  @media (max-width: ${_configSite.md}px) {
+    font-size: 1.75rem;
     &:hover {
       &:after {
         width: 0%;
       }
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: ${_configSite.sm}px) {
     font-size: 1.5rem;
+  }
+  @media (max-width: ${_configSite.xs}px) {
+    font-size: 1.25rem;
   }
 `;

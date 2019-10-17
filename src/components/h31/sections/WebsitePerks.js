@@ -25,6 +25,8 @@ const ListPerk = styled.ul`
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 60px;
+  grid-column: span 12;
+  
   list-style: none;
   padding: 0;
   margin: 0;

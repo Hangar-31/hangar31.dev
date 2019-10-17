@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
-import { css } from "@emotion/core";
+// import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 
@@ -30,6 +30,7 @@ const Title3Large = styled(Title3)`
 
 const Process = styled.section`
   margin-bottom: 200px;
+  grid-column: 3 / span 8; 
 
   ${Text1} {
     grid-row: 2;
@@ -85,11 +86,7 @@ const processes = [
 
 export default () => (
   <Container>
-    <Wrapper
-      css={css`
-        max-width: 992px;
-      `}
-    >
+    <Wrapper>
       {processes.map((process) => (
         <Process>
           <Content>

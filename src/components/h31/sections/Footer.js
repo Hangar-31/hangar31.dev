@@ -21,6 +21,13 @@ const TopBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  grid-column: 2 / span 10;
+  @media (max-width: ${_configSite.md}px) {
+    grid-column: 1 / span 12;
+  }
+  @media (max-width: ${_configSite.sm}px) {
+    flex-direction: column;
+  }
 `;
 
 const TopBarList = styled.ul`
@@ -31,17 +38,33 @@ const TopBarList = styled.ul`
 
 const TopBarItem = styled.li`
   margin-left: 45px;
+  @media (max-width: ${_configSite.sm}px) {
+    margin: 15px;
+  }
 `;
 
 const BottomBarList = styled.ul`
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
+  grid-column: 2 / span 10;
+  @media (max-width: ${_configSite.md}px) {
+    grid-column: 1 / span 12;
+  }
+  @media (max-width: ${_configSite.sm}px) {
+    flex-direction: column;
+  }
 `;
+
 const BottomBarItem = styled.li`
   margin-right: 30px;
   &:last-child {
     margin-right: 0;
+  }
+  @media (max-width: ${_configSite.sm}px) {
+    text-align: center;
+    margin: 0 0 15px 0;
   }
 `;
 
@@ -50,10 +73,16 @@ export default () => (
     <Container
       css={css`
         z-index: 1;
-        height: 1200px;
+        height: 900px;
         background: transparent;
-        @media (max-width: 1440px) {
-          height: 1000px;
+        @media (max-width: ${_configSite.lg}px) {
+          height: 850px;
+        }
+        @media (max-width: ${_configSite.md}px) {
+          height: 700px;
+        }
+        @media (max-width: ${_configSite.sm}px) {
+          height: 750px;
         }
       `}
     >
@@ -66,16 +95,23 @@ export default () => (
           left: 0;
           right: 0;
           margin: 0 auto;
-          @media (max-width: 1440px) {
+
+          @media (max-width: ${_configSite.xl}px) {
             padding-bottom: 60px;
+          }
+          @media (max-width: ${_configSite.md}px) {
+            padding-bottom: 30px;
           }
         `}
       >
         <TopBar>
           <ImgLogo
             cssProp={`
-            width: 150px;
-          `}
+              width: 150px;
+              @media (max-width: ${_configSite.md}px) {
+                width: 125px;
+              }
+            `}
           />
 
           <TopBarList>

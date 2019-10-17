@@ -9,11 +9,19 @@ import Title2 from "../base/Title2";
 
 // Images
 import ImgFullContainer from "../base/ImgFullContainer";
+import _configSite from "../../_configSite";
 
 // Styled Components
 const ListTeam = styled.ul`
   list-style: none;
   padding: 0;
+  grid-column: 3 / span 8;
+  @media (max-width: ${_configSite.md}px) {
+    grid-column: 2 / span 10; 
+  }
+  @media (max-width: ${_configSite.xs}px) {
+    grid-column: 1 / span 12;
+  }
 `
 
 const ItemTeam = styled.li`

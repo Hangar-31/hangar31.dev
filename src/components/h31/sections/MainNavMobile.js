@@ -1,10 +1,10 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { css, Global } from "@emotion/core";
 import styled from "@emotion/styled";
 import TransitionLink from "gatsby-plugin-transition-link";
 
 // Config
-import _config from "../../_configSite";
+import _configSite from "../../_configSite";
 
 // Images
 import ImgLogo from "../../images/ImgLogo";
@@ -20,7 +20,7 @@ const MobileContainer = styled.div`
   width: calc(100% - 60px);
   padding: 30px;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${_configSite.md}) {
     display: flex;
   }
   @media (max-width: 600px) {
@@ -36,6 +36,7 @@ const MobileButtonOpen = styled.button`
   margin: 0;
   border: none;
   background: none;
+  cursor: pointer;
 `;
 
 const MobileButtonClose = styled.button`
@@ -48,6 +49,7 @@ const MobileButtonClose = styled.button`
   margin: 0;
   border: none;
   background: none;
+  cursor: pointer;
 
   @media (max-width: 600px) {
     top: 15px;
@@ -66,7 +68,7 @@ const Container = styled.nav`
   left: 0;
   background: linear-gradient(180deg, #0094d1 0%, #49e9ff 100%);
 
-  padding: ${_config.padding}px;
+  padding: ${_configSite.padding}px;
   height: 100vh;
   width: 100vw;
   margin: 0 auto;
@@ -156,6 +158,15 @@ export default class extends React.Component {
 
     return (
       <MobileContainer>
+        {menuVisible && (
+          <Global
+            styles={css`
+              body {
+                overflow: hidden;
+              }
+            `}
+          />
+        )}
         <WrapperLogo
           to="/"
           entry={{
@@ -185,9 +196,9 @@ export default class extends React.Component {
 
         <MobileButtonOpen onClick={() => this.hideMenu()}>
           <svg
-            width="64"
-            height="52"
-            viewBox="0 0 32 26"
+            width="32"
+            height="32"
+            viewBox="0 0 16 14"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -242,9 +253,9 @@ export default class extends React.Component {
 
           <MobileButtonClose onClick={() => this.hideMenu()}>
             <svg
-              width="80"
-              height="76"
-              viewBox="0 0 40 38"
+              width="32"
+              height="32"
+              viewBox="0 0 16 14"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -257,7 +268,7 @@ export default class extends React.Component {
             </svg>
           </MobileButtonClose>
           <ListLinks>
-            {_config.mainNav.map(link => (
+            {_configSite.mainNav.map(link => (
               <ItemLink>
                 <MainLink
                   to={link.to}

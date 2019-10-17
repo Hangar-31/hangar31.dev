@@ -14,9 +14,12 @@ import LinkStyledExternalNoAction from "../base/LinkStyledExternalNoAction";
 
 // Config
 import _configSite from "../../_configSite";
+
+// Components
 import Form1 from "../forms/Form1";
 import Title4 from "../base/Title4";
 
+// Styled Components
 const ContainerHours = styled.div`
   background: #A1D0E3;
   width: 100%;
@@ -24,6 +27,9 @@ const ContainerHours = styled.div`
   
   padding 30px 60px 60px 60px;
   box-sizing: border-box;
+  @media (max-width: ${_configSite.xs}px) {
+    padding 15px;
+  }
 `
 
 const ListHours = styled.ul`
@@ -56,8 +62,11 @@ const ContainerForm = styled.div`
 
   box-sizing: border-box;
 
-  @media(max-width: 992px) {
+  @media(max-width: ${_configSite.md}px) {
     grid-column: span 1;
+  }
+  @media (max-width: ${_configSite.xs}px) {
+    padding 15px;
   }
 `
 
@@ -91,10 +100,13 @@ export default () => (
     >
       <div>
         <Title1 css={css`
-          font-size: 3.5rem;
+          font-size: 3.3rem;
           margin-bottom: 30px;
-          @media(max-width: 1050px) {
-            font-size: 3rem;
+          @media(max-width: ${_configSite.lg}px) {
+            font-size: 2.75rem;
+          }
+          @media(max-width: ${_configSite.md}px) {
+            font-size: 2.5rem;
           }
         `}
         >
@@ -131,7 +143,6 @@ export default () => (
         <ContainerHours>
           <Title2 css={css`
             display: block;
-            max-width: 768px;
             margin: 0 auto;
             color: #ffffff;
             margin-bottom: 30px;
@@ -173,7 +184,6 @@ export default () => (
       <ContainerForm>
         <Title2 css={css`
           display: block;
-          max-width: 768px;
           margin: 0 auto;
           color: #003E57;
           margin-bottom: 30px;

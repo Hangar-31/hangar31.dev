@@ -29,19 +29,20 @@ export default styled(TransitionLink)`
     color: #069bd5;
   }
 
-  @media (max-width: 1200px) {
-    font-size: 1.125rem;
-  }
-  @media (max-width: 1100px) {
+  @media (max-width: ${_configSite.lg}px) {
     font-size: 1rem;
-    padding: 7px 11px;
+    padding: 10px 15px;
   }
-  @media (max-width: 992px) {
-    font-size: 2rem;
+  @media (max-width: ${_configSite.md}px) {
+    font-size: 1.75rem;
     padding: 12px 18px;
   }
-  @media (max-width: 992px) {
+  @media (max-width: ${_configSite.sm}px) {
     font-size: 1.5rem;
-    padding: 8px 14px;
+    padding: 10px 15px;
+  }
+  @media (max-width: ${_configSite.xs}px) {
+    font-size: 1.25rem;
+    padding: 8px 12px;
   }
 `;

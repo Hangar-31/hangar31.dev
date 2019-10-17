@@ -4,14 +4,25 @@ import _configSite from "../../_configSite";
 
 export default styled.section`
   position: relative;
-  padding: ${_configSite.padding * 4}px ${_configSite.padding}px;
-  width: calc(100% - ${_configSite.padding * 2}px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  @media (max-width: 1280px) {
-    padding: ${_configSite.padding * 3}px ${_configSite.padding}px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  @media (max-width: ${_configSite.xl}px) {
   }
-  @media (max-width: 992px) {
-    padding: ${_configSite.padding * 2}px ${_configSite.padding}px;
+  @media (max-width: ${_configSite.lg}px) {
+  }
+  @media (max-width: ${_configSite.md}px) {
+    padding: 15px;
+  }
+  @media (max-width: ${_configSite.sm}px) {
+  }
+  @media (max-width: ${_configSite.xs}px) {
   }
 `;
