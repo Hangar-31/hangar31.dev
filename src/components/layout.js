@@ -48,8 +48,8 @@ const Layout = ({ children, path = "/" }) => {
       <div
         css={css`
           position: relative;
-          margin-top: ${path === "/" ? "calc(80vh - 136px)" : "0px"};
-          padding-top: ${excludedPaths.includes(path) ? "0px" : "175px"};
+          margin-top: ${path !== "/" ? "0px" : "calc(80vh - 136px)"};
+          padding-top: ${!excludedPaths.includes(path) ? "175px" : "0px"};
           transition: 1.5s ease-in-out;
 
           &:after {
@@ -61,7 +61,7 @@ const Layout = ({ children, path = "/" }) => {
             height: 100%;
             width: 100%;
 
-            opacity: ${path !== "/free-consultation" ? "1" : "0"};
+            opacity: ${path === "/free-consultation" ? "0" : "1"};
             transition: 1s;
 
             background: linear-gradient(
@@ -72,7 +72,7 @@ const Layout = ({ children, path = "/" }) => {
           }
 
           @media (max-width: ${_configSite.md}px) {
-            padding-top: ${excludedPaths.includes(path) ? "0px" : "125px"};
+            padding-top: ${!excludedPaths.includes(path) ? "125px" : "0px"};
             &:after {
               background: linear-gradient(
                 rgba(255, 255, 255, 0) 0px,
@@ -96,7 +96,7 @@ const Layout = ({ children, path = "/" }) => {
         <AnimeSiteBackground path={path} />
         {children}
       </div>
-      <Footer path={path} />
+      <Footer />
     </>
   );
 };
