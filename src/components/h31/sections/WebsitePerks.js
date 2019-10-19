@@ -18,12 +18,13 @@ import ImgPerkSEO from "../../images/perks/ImgPerkSEO";
 import ImgPerkGrow from "../../images/perks/ImgPerkGrow";
 import ImgPerk4D from "../../images/perks/ImgPerk4D";
 import LinkStyled1 from "../base/LinkStyled1";
+import LinkInlineText from "../base/LinkInlineText";
 
 // Styled Components
 const ListPerk = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 30px;
+  grid-column-gap: 60px;
   grid-row-gap: 60px;
   grid-column: span 12;
   
@@ -55,17 +56,22 @@ const data = [
   {
     img: <ImgPerkSpeed />,
     title: "Fast Performance",
-    text: "Our websites are developed using cutting edge technology, which allows us to build insanely performant websites and web applications. Trust us, you’ll see the difference!"
+    text: (
+      <>
+        Our websites are developed using cutting edge technology, which allows us to build insanely performant websites and web applications. Check out some of our work, and&nbsp;
+        <LinkInlineText to="/websites">see the difference!</LinkInlineText>
+      </>
+    )
   },
   {
     img: <ImgPerkMobile />,
     title: "Incredibly Mobile",
-    text: "As of 2017, mobile devices generate more than 50% of all website traffic. Its Important that your website be formatted and easy to view on any platform!"
+    text: "As of 2019, mobile devices generate almost 50% of all website traffic. Our websites are made to meet the demands of mobile users through fast load times, and mobile UI designs that work for phones, tablets, and more!"
   },
   {
     img: <ImgPerkScale />,
-    title: "Scalable Hosting",
-    text: "We want your website to grow, so we scale your cost! This ensures that hosting with us keeps your website budget freindly at every stage of growth."
+    title: "Scalable Resources",
+    text: "Never worry about your website shutting off or paying for resources your're not using again! All of our websites are hosted on an internationally distributed hosting network, starting at only $10 a month, which only goes up as your website grows!"
   },
   {
     img: <ImgPerkSEO />,
@@ -104,9 +110,10 @@ export default () => (
             >
               {perk.title}
             </Title3>
-            {typeof perk.text === "string" && (
+            {perk.title !== "Our 4D Process" && (
               <Text1
                 css={css`
+                  text-align: justify;
                   display: inline-block;
                   color: ${_configSite.colorOffWhite};
                   @media(max-width: 700px) {
@@ -119,7 +126,7 @@ export default () => (
                 {perk.text}
               </Text1>
             )}
-            {typeof perk.text !== "string" && (
+            {perk.title === "Our 4D Process" && (
               <div css={css`
                   width: 100%;
                   text-align: center;

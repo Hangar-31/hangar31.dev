@@ -51,12 +51,17 @@ export default () => (
             }
           `}
         >
-          <Title2>This is a test title area</Title2>
+          <Title2>Crafting Digital Experiences</Title2>
 
           <Text1>
-            Turning personal visions into amazing digital experiences. Our goal
-            is to bring you and your audience closer, through creatively
-            personal design, and seriously powerful technology!
+            We aim to bring you and your audience closer through creatively
+            tailored websites, that host some serious power under the hood!
+          </Text1>
+
+          <Text1>
+            Add in the ability to scale as you grow, along with our dedication
+            to long-term support, and you&apos;ve got yourself a solid flight
+            plan for your online journey!
           </Text1>
         </div>
       </div>

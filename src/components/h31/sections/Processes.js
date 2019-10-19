@@ -16,21 +16,40 @@ import ImgProcessDiscovery from "../../images/processes/ImgProcessDiscovery";
 import ImgProcessDesign from "../../images/processes/ImgProcessDesign";
 import ImgProcessDevelop from "../../images/processes/ImgProcessDevelop";
 import ImgProcessDeploy from "../../images/processes/ImgProcessDeploy";
+import _configSite from "../../_configSite";
 
 // Styled Components
 const Content = styled.section`
   display: grid;
   grid-column-gap: 60px;
   grid-template-columns: 2fr 1fr;
+  @media (max-width: ${_configSite.md}px) {
+    grid-template-columns: 5fr 1fr;
+  }
+  @media (max-width: ${_configSite.xs}px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Title3Large = styled(Title3)`
-  font-size: 2.25rem;
+  font-size: 2.25rem !important;
+  @media (max-width: ${_configSite.xs}px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Process = styled.section`
   margin-bottom: 200px;
-  grid-column: 3 / span 8; 
+  grid-column: 3 / span 8;
+
+  @media (max-width: ${_configSite.md}px) {
+    grid-column: 2 / span 10;
+    margin-bottom: 120px;
+  }
+  @media (max-width: ${_configSite.xs}px) {
+    margin-bottom: 60px;
+    grid-column: 1 / span 12;
+  }
 
   ${Text1} {
     grid-row: 2;
@@ -39,19 +58,31 @@ const Process = styled.section`
   ${ImgContainer} {
     grid-row: 2;
     grid-column: 2;
+    @media (max-width: ${_configSite.xs}px) {
+      display: none;
+    }
   }
 
   &:nth-of-type(even) {
     ${Content} {
       grid-template-columns: 1fr 2fr;
+      @media (max-width: ${_configSite.xs}px) {
+        grid-template-columns: 1fr;
+      }
     }
     ${Title3Large} {
       grid-row: 1;
       grid-column: 2;
+      @media (max-width: ${_configSite.xs}px) {
+        grid-column: 1;
+      }
     }
     ${Text1} {
       grid-row: 2;
       grid-column: 2;
+      @media (max-width: ${_configSite.xs}px) {
+        grid-column: 1;
+      }
     }
     ${ImgContainer} {
       grid-row: 2;
