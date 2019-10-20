@@ -18,8 +18,13 @@ class Layout extends React.Component {
     super();
 
     this.state = {
-      path: "/"
+      path: "/",
+      siteLoaded: false
     };
+  }
+
+  componentDidMount() {
+    this.setState({ siteLoaded: true });
   }
 
   componentWillReceiveProps({ path }) {
@@ -28,7 +33,7 @@ class Layout extends React.Component {
 
   render() {
     const excludedPaths = ["/", "", "/free-consultation"];
-    const { path } = this.state;
+    const { path, siteLoaded } = this.state;
     const { children } = this.props;
 
     console.log(path);
@@ -68,7 +73,7 @@ class Layout extends React.Component {
             position: relative;
             margin-top: ${path === "/" ? "calc(80vh - 136px)" : "0px"};
             padding-top: ${excludedPaths.includes(path) ? "0px" : "175px"};
-            transition: 1.5s ease-in-out;
+            transition: ${siteLoaded ? "1.5s ease-in-out" : "0s"};
 
             &:after {
               display: block;
@@ -80,7 +85,7 @@ class Layout extends React.Component {
               width: 100%;
 
               opacity: ${path !== "/free-consultation" ? "1" : "0"};
-              transition: 1s;
+              transition: ${siteLoaded ? "1s" : "0s"};
 
               background: linear-gradient(
                 rgba(255, 255, 255, 0) 0,
