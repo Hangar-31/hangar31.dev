@@ -275,11 +275,11 @@ export default class extends React.Component {
                   activeClassName="current-page"
                   exit={{
                     trigger: () => this.hideMenu(),
-                    length: path === "/" ? 2 : 0.5,
+                    length: path !== "/" ? 0.5 : 2,
                     zIndex: 1
                   }}
                   entry={{
-                    delay: path === "/" ? 1.5 : 0.5,
+                    delay: path !== "/" ? 0.5 : 1.5,
                     zIndex: 1
                   }}
                 >
@@ -294,11 +294,11 @@ export default class extends React.Component {
                 activeClassName="current-page-free-consultation"
                 entry={{
                   trigger: () => this.hideMenu(),
-                  delay: path === "/" ? 1.5 : 0.5,
+                  delay: path !== "/" ? 0.5 : 1.5,
                   zIndex: 1
                 }}
                 exit={{
-                  length: path === "/" ? 2 : 0.5,
+                  length: path !== "/" ? 0.5 : 2,
                   zIndex: 1
                 }}
               >

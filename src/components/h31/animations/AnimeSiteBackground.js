@@ -75,7 +75,7 @@ export default ({ path }) => (
   <Container
     css={css`
       transition: 1s;
-      opacity: ${path === "/free-consultation" ? 0 : 1};
+      opacity: ${path !== "/free-consultation" ? 1 : 0};
     `}
   >
     <ImgFullContainer

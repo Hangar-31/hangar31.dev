@@ -114,7 +114,7 @@ class Layout extends React.Component {
           <AnimeSiteBackground path={path} />
           {children}
         </div>
-        <Footer path={path} />
+        <Footer />
       </>
     );
   }
