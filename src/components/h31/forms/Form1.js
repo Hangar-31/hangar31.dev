@@ -241,12 +241,16 @@ export default class Form1 extends React.Component {
 
         if (elem.nodeName.toLowerCase() === "select") {
           if (!elem.validity.valid || elem.value === elem[0].value) {
-            errors.push(`Error on field ${elem.name}: Please select a value.`);
+            elem.labels[0].style.color = "red";
+            errors.push(
+              `Error on field: ${elem.labels[0].innerText} | Please select a value.`
+            );
           }
         } else if (elem.nodeName.toLowerCase() !== "button") {
           if (!elem.validity.valid) {
+            elem.labels[0].style.color = "red";
             errors.push(
-              `Error on field ${elem.name}: ${elem.validationMessage}`
+              `Error on field:  ${elem.labels[0].innerText} | ${elem.validationMessage}`
             );
           }
         }
@@ -297,10 +301,24 @@ export default class Form1 extends React.Component {
             css={css`
               color: red;
               margin-bottom: 30px;
+              padding: 0px;
+              list-style: none;
+              border-bottom: 2px solid ${_configSite.colorPrimary};
             `}
           >
             {errors.map(error => (
-              <li key={error}>
+              <li
+                css={css`
+                  ${Text1.__emotion_styles}
+
+                  color: red !important;
+                  font-size: 0.75rem !important;
+                  padding: 5px;
+                  margin-bottom: 10px;
+                  background: rgba(255, 255, 255, 0.5);
+                `}
+                key={error}
+              >
                 <span>{error}</span>
               </li>
             ))}
@@ -315,24 +333,45 @@ export default class Form1 extends React.Component {
             `}
           >
             <Select
+              required
               id="form-subject"
               onChange={this.handleChange}
-              required
               name="Subject"
             >
               <option value="" />
-              <option value="Joining CFMA">Joining CFMA</option>
-              <option value="Career Coaching">Career Coaching</option>
-              <option value="Audition and Giggin Questions">
-                Audition and Giggin Questions
-              </option>
-              <option value="Questions About Benefits">
-                Questions About Benefits
-              </option>
-              <option value="Question About Member Log In">
-                Question About Member Log In
-              </option>
-              <option value="Other">Other</option>
+              <optgroup label="Websites">
+                <option value="I Want A Website For My Business!">
+                  I Want A Website For My Business!
+                </option>
+                <option value="My Website Needs An Overhaul.">
+                  My Website Needs An Overhaul.
+                </option>
+                <option value="I Need To Convert My Website To Something Faster and More Secure.">
+                  I Need To Convert My Website To Something Faster and More
+                  Secure.
+                </option>
+              </optgroup>
+
+              <optgroup label="Questions">
+                <option value="I Don't Have An Online Presence, Where Do I Begin?">
+                  I Don&apos;t Have An Online Presence, Where Do I Begin?
+                </option>
+                <option value="Do I Need A Website?">
+                  Do I Need A Website?
+                </option>
+              </optgroup>
+
+              <optgroup label="General">
+                <option value="I Wanted To Leave A Testimonial!">
+                  I Wanted To Leave A Testimonial!
+                </option>
+                <option value="Just Wanted To Say Hi!">
+                  Just Wanted To Say Hi!
+                </option>
+                <option value="Something Else You Somehow Missed On This Large List!">
+                  Something Else...
+                </option>
+              </optgroup>
             </Select>
 
             <Label htmlFor="form-subject">
@@ -355,7 +394,7 @@ export default class Form1 extends React.Component {
               value={Name}
             />
 
-            <Label htmlFor="form-name">What&#39;s Your Name?</Label>
+            <Label htmlFor="form-name">What&#39;s Your Name? *</Label>
           </P>
 
           {/* Email */}
@@ -373,7 +412,7 @@ export default class Form1 extends React.Component {
               value={Email}
             />
 
-            <Label htmlFor="form-email">Best Email To Contact?</Label>
+            <Label htmlFor="form-email">Best Email To Contact? *</Label>
           </P>
 
           {/* Phone */}
@@ -383,10 +422,9 @@ export default class Form1 extends React.Component {
             `}
           >
             <Input
-              required
               id="form-phone"
               onChange={this.handleChange}
-              type="text"
+              type="tel"
               name="Phone"
               value={Phone}
             />
@@ -401,7 +439,6 @@ export default class Form1 extends React.Component {
             `}
           >
             <Input
-              required
               id="form-location"
               onChange={this.handleChange}
               type="text"
@@ -422,7 +459,6 @@ export default class Form1 extends React.Component {
             `}
           >
             <Input
-              required
               id="form-company"
               onChange={this.handleChange}
               type="text"
@@ -442,7 +478,6 @@ export default class Form1 extends React.Component {
             `}
           >
             <Input
-              required
               id="form-current-website"
               onChange={this.handleChange}
               type="text"
@@ -470,7 +505,7 @@ export default class Form1 extends React.Component {
               value={Message}
             />
 
-            <Label htmlFor="form-message">Tell Us How Can We Help!</Label>
+            <Label htmlFor="form-message">Tell Us How Can We Help! *</Label>
           </P>
 
           {/* Submit Button */}

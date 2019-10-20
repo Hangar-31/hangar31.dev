@@ -2,6 +2,7 @@
 import React from "react";
 // import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import Fade from "react-reveal";
 
 
 // Components
@@ -100,17 +101,17 @@ const processes = [
   },
   {
     title: "2. Design",
-    text: "Our Website Discovery is the foundation for any website - This is a vitally important step that gives us an opportunity to go over your vision in-depth, establish clear and achievable goals, assess necessary functions and features, review your online presence and improvement opportunities, and reveal any unforeseen obstacles. We then go to work to deliver you a high level sitemap and clearly addressed action plan that lays the ground work for creating a powerful and effective website.",
+    text: "This is where we visually establish your website according to our research and your personal vision. When it comes to design we want your website to soar above the field. So we take great consideration for each project and work to create a compelling and intuitive design that sets your website apart while letting your users engage with your content effectively. We will work with you to establish a strong Layout, make consistent identifying color and font choices, and select or create distinctive imagery and graphics.",
     image: <ImgProcessDesign />
   },
   {
     title: "3. Develop",
-    text: "Our Website Discovery is the foundation for any website - This is a vitally important step that gives us an opportunity to go over your vision in-depth, establish clear and achievable goals, assess necessary functions and features, review your online presence and improvement opportunities, and reveal any unforeseen obstacles. We then go to work to deliver you a high level sitemap and clearly addressed action plan that lays the ground work for creating a powerful and effective website.",
+    text: "The designs for our site have been drafted, and now it’s time to bring it to life! The development process begins with the writing of code, setting up of 3rd party-integrations, incorporating A11y accessibility standards, creating back-end solutions, and much more. Testing is also a critical aspect of this process. Your website should work for you, and so we’ll work with you during this process to make sure it does just that. Whether it’s setting up your B2B integrations, your blogging platform, or a custom Web Application, we’ll work closely with you until we reach the right solution that works for you!",
     image: <ImgProcessDevelop />
   },
   {
     title: "4. Deploy",
-    text: "Our Website Discovery is the foundation for any website - This is a vitally important step that gives us an opportunity to go over your vision in-depth, establish clear and achievable goals, assess necessary functions and features, review your online presence and improvement opportunities, and reveal any unforeseen obstacles. We then go to work to deliver you a high level sitemap and clearly addressed action plan that lays the ground work for creating a powerful and effective website.",
+    text: "We are cleared for take off, which for your website, means we have a lot of people to reach! In order to reach them, we’ll use a solution that takes your website not just to a server in New York, but across a distributed infrastructure of cloud servers around the globe! This makes your website faster, more secure, and accessible to every one of your visitors, all for a low rate, that scales as you grow!",
     image: <ImgProcessDeploy />
   }
 ]
@@ -120,19 +121,21 @@ export default () => (
     <Wrapper>
       {processes.map((process) => (
         <Process>
-          <Content>
-            <Title3Large>
-              {process.title}
-            </Title3Large>
+          <Fade duration={6000} bottom>
+            <Content>
+              <Title3Large>
+                {process.title}
+              </Title3Large>
 
-            <Text1>
-              {process.text}
-            </Text1>
+              <Text1>
+                {process.text}
+              </Text1>
 
-            <ImgContainer>
-              {process.image}
-            </ImgContainer>
-          </Content>
+              <ImgContainer>
+                {process.image}
+              </ImgContainer>
+            </Content>
+          </Fade>
         </Process>
       ))}
     </Wrapper>

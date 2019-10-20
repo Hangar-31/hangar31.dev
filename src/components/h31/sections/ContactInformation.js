@@ -89,7 +89,7 @@ export default () => (
   <Container>
     <Wrapper>
       <Grid>
-        <Title2Edited>Hours</Title2Edited>
+        <Title2Edited>Hours (EST)</Title2Edited>
 
         <ListHours>
           {_configSite.hours.map(hour => (

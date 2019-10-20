@@ -1,11 +1,14 @@
-/* eslint-disable prettier/prettier */
 import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { StaticQuery, graphql, Link } from "gatsby";
+
+// Components
 import Img from "gatsby-image";
 import Container from "../layouts/Container";
 import Wrapper from "../layouts/Wrapper";
+
+// Config
 import _configSite from "../../_configSite";
 
 const Card = styled.article`
@@ -41,7 +44,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+        allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
           edges {
             node {
               id
@@ -50,12 +53,13 @@ export default () => (
               }
               frontmatter {
                 title
+                website
                 image {
                   childImageSharp {
                     fluid(maxWidth: 800) {
                       ...GatsbyImageSharpFluid
                     }
-                  }            
+                  }
                 }
               }
             }
@@ -63,14 +67,18 @@ export default () => (
         }
       }
     `}
-    render={(data => {
-      const articles = data.allMarkdownRemark.edges
+    render={data => {
+      const articles = data.allMarkdownRemark.edges;
+
       return (
         <Container>
           <Wrapper>
             {articles.map(article => (
-              <Link  
+              <a
+                href={article.node.frontmatter.website}
                 css={css`
+                  text-decoration: none;
+                  cursor: pointer;
                   grid-column: span 4;
                   ${Card} .gatsby-image-wrapper {
                     position: absolute !important;
@@ -82,7 +90,12 @@ export default () => (
                     width: 100%;
                     height: calc(100% + 4px);
                     transition: 3s;
-                    transition-timing-function: cubic-bezier(0.05, 0.68, 0, 1.01);
+                    transition-timing-function: cubic-bezier(
+                      0.05,
+                      0.68,
+                      0,
+                      1.01
+                    );
                   }
 
                   @media (max-width: ${_configSite.md}px) {
@@ -98,16 +111,17 @@ export default () => (
                     }
                   }
                 `}
-                to={article.node.fields.slug}
               >
                 <Card key={article.node.id}>
-                  <Img fluid={article.node.frontmatter.image.childImageSharp.fluid} />
+                  <Img
+                    fluid={article.node.frontmatter.image.childImageSharp.fluid}
+                  />
                 </Card>
-              </Link>
+              </a>
             ))}
           </Wrapper>
         </Container>
-      )
-    })}
+      );
+    }}
   />
 );

@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import styled from "@emotion/styled";
+import Fade from "react-reveal";
 
 // Components
 import Title1 from "../base/Title1";
@@ -20,12 +21,14 @@ const Wrapper = styled.div`
 export default ({title, subtitle}) => (
   <Container>
     <Wrapper>
-      <Subtitle1>
-        {subtitle}
-      </Subtitle1>
-      <Title1>
-        {title}
-      </Title1>
+      <Fade bottom duration={3000}>
+        <Subtitle1>
+          {subtitle}
+        </Subtitle1>
+        <Title1>
+          {title}
+        </Title1>
+      </Fade>
     </Wrapper>
   </Container>
 );

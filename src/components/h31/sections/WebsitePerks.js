@@ -2,6 +2,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import Fade from "react-reveal";
 
 // Components
 import Container from "../layouts/Container";
@@ -29,7 +30,7 @@ const ListPerk = styled.ul`
   grid-column: span 12;
   
   list-style: none;
-  padding: 0;
+  padding: 120px 0;
   margin: 0;
 
   @media(max-width: 992px) {
@@ -98,21 +99,22 @@ export default () => (
   >
     <Wrapper>
       <ListPerk>
-        {data.map(perk => (
-          <ItemPerk>
-            <WrapperImage>
-              {perk.img}
-            </WrapperImage>
-            <Title3
-              css={css`
+        <Fade left cascade>
+          {data.map(perk => (
+            <ItemPerk>
+              <WrapperImage>
+                {perk.img}
+              </WrapperImage>
+              <Title3
+                css={css`
               text-align: center;
             `}
-            >
-              {perk.title}
-            </Title3>
-            {perk.title !== "Our 4D Process" && (
-              <Text1
-                css={css`
+              >
+                {perk.title}
+              </Title3>
+              {perk.title !== "Our 4D Process" && (
+                <Text1
+                  css={css`
                   text-align: justify;
                   display: inline-block;
                   color: ${_configSite.colorOffWhite};
@@ -122,21 +124,22 @@ export default () => (
                     margin: 0 auto;
                   }
                 `}
-              >
-                {perk.text}
-              </Text1>
+                >
+                  {perk.text}
+                </Text1>
             )}
-            {perk.title === "Our 4D Process" && (
-              <div css={css`
+              {perk.title === "Our 4D Process" && (
+                <div css={css`
                   width: 100%;
                   text-align: center;
                 `}
-              >
-                {perk.text}
-              </div>
+                >
+                  {perk.text}
+                </div>
             )}
-          </ItemPerk>
-        ))}
+            </ItemPerk>
+          ))}
+        </Fade>
       </ListPerk>
     </Wrapper>
   </Container>

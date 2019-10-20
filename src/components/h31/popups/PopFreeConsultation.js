@@ -110,7 +110,7 @@ export default () => (
           }
         `}
         >
-        Free Consultation
+          Free Consultation
         </Title1>
 
         <Title2 css={css`
@@ -122,7 +122,7 @@ export default () => (
           }
         `}
         >
-        Consultation Text
+          Consultation Text
         </Title2>
 
         <Text1 css={css`
@@ -148,7 +148,7 @@ export default () => (
             margin-bottom: 30px;
           `}
           >
-            Hours
+            Hours (EST)
           </Title2>
           <ListHours>
             {_configSite.hours.map(hour => (

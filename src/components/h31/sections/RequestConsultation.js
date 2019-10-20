@@ -1,6 +1,8 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable prettier/prettier */
 import React from "react";
 import {css} from "@emotion/core";
+import Fade from "react-reveal";
 
 // Components
 import Container from "../layouts/Container";
@@ -20,10 +22,18 @@ export default () => (
   >
     <Wrapper
       css={css`
+        display: block;
         grid-gap: 0px;
+        padding: 120px 0!important;
+        > .react-reveal {
+          ${Wrapper.__emotion_styles}
+          grid-gap: 0px;
+          padding: 0!important;
+        }
       `}
     >
-      <Title1 css={css`
+      <Fade bottom>
+        <Title1 css={css`
         font-size: 8.7rem;
         text-align: center;
         grid-column: 1 / span 12;
@@ -43,11 +53,11 @@ export default () => (
           font-size: 2.6rem;
         }
       `}
-      >
+        >
         Request a Free
-      </Title1>
+        </Title1>
 
-      <Title1 css={css`
+        <Title1 css={css`
         font-size: 9.5rem;
         text-align: center;
         grid-column: 1 / span 12;
@@ -69,12 +79,12 @@ export default () => (
           font-size: 2.825rem;
         }
       `}
-      >
+        >
         Consultation
-      </Title1>
+        </Title1>
 
-      <Title2
-        css={css`
+        <Title2
+          css={css`
           line-height: 1;
           font-size: 2rem;
           text-align: justify;
@@ -101,19 +111,20 @@ export default () => (
             font-size: 1rem;
           }
         `}
-      >
+        >
         Not sure how to get your website started? Let us help get you on the right path!
-      </Title2>
+        </Title2>
 
-      <div css={css`
+        <div css={css`
         grid-column: 1 / span 12;
         text-align: center;
       `}
-      >
-        <LinkStyled1 to="/contact">
+        >
+          <LinkStyled1 to="/contact">
           Get Started
-        </LinkStyled1>
-      </div>
+          </LinkStyled1>
+        </div>
+      </Fade>
     </Wrapper>
   </Container>
 );
