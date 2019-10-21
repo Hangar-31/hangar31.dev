@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable no-underscore-dangle */
 import React from "react";
-// import { css } from "@emotion/core";
+import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import Fade from "react-reveal";
 
 // Components
 import Container from "../layouts/Container";
@@ -87,35 +87,62 @@ const Title2Edited = styled(Title2)`
 
 export default () => (
   <Container>
-    <Wrapper>
-      <Grid>
-        <Title2Edited>Hours (EST)</Title2Edited>
+    <Wrapper
+      css={css`
+        display: block;
+        padding-bottom: 120px !important;
+        > .react-reveal {
+          ${Wrapper.__emotion_styles}
+          padding: 0 !important;
+        }
+      `}
+    >
+      <Grid
+        css={css`
+          > .react-reveal:nth-of-type(1) {
+            grid-column: span 3;
+          }
+          > .react-reveal:nth-of-type(2) {
+            grid-column: span 3;
+          }
+          > .react-reveal:nth-of-type(4) {
+            grid-column: span 2;
+          }
+        `}
+      >
+        <Fade bottom>
+          <Title2Edited>Hours (EST)</Title2Edited>
+        </Fade>
 
-        <ListHours>
-          {_configSite.hours.map(hour => (
-            <ItemHours>
-              <TitleDay>{hour.day}</TitleDay>
+        <Fade bottom>
+          <ListHours>
+            {_configSite.hours.map(hour => (
+              <ItemHours>
+                <TitleDay>{hour.day}</TitleDay>
 
-              <Title4>
-                {hour.start} - {hour.end}
-              </Title4>
-            </ItemHours>
-          ))}
-        </ListHours>
+                <Title4>
+                  {hour.start} - {hour.end}
+                </Title4>
+              </ItemHours>
+            ))}
+          </ListHours>
+        </Fade>
 
-        <ContainerPhone>
-          <Title2Edited>Phone</Title2Edited>
+        <Fade bottom>
+          <ContainerPhone>
+            <Title2Edited>Phone</Title2Edited>
 
-          <PhoneLink href={`tel:${_configSite.phone}`}>
-            {_configSite.phone}
-          </PhoneLink>
-        </ContainerPhone>
+            <PhoneLink href={`tel:${_configSite.phone}`}>
+              {_configSite.phone}
+            </PhoneLink>
+          </ContainerPhone>
 
-        <ContainerLocation>
-          <Title2Edited>Locations</Title2Edited>
+          <ContainerLocation>
+            <Title2Edited>Locations</Title2Edited>
 
-          <Title4>{_configSite.location}</Title4>
-        </ContainerLocation>
+            <Title4>{_configSite.location}</Title4>
+          </ContainerLocation>
+        </Fade>
       </Grid>
     </Wrapper>
   </Container>

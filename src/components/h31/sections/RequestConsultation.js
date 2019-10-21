@@ -34,27 +34,27 @@ export default () => (
     >
       <Fade bottom>
         <Title1 css={css`
-        font-size: 8.7rem;
-        text-align: center;
-        grid-column: 1 / span 12;
-        @media (max-width: ${_configSite.xl}px) {
-          font-size: 7rem;
-        }
-        @media (max-width: ${_configSite.lg}px) {
-          font-size: 5.8rem;
-        }
-        @media (max-width: ${_configSite.md}px) {
-          font-size: 4.58rem;
-        }
-        @media (max-width: ${_configSite.sm}px) {
-          font-size: 3.25rem;
-        }
-        @media (max-width: ${_configSite.xs}px) {
-          font-size: 2.6rem;
-        }
-      `}
+          font-size: 8.7rem;
+          text-align: center;
+          grid-column: 1 / span 12;
+          @media (max-width: ${_configSite.xl}px) {
+            font-size: 7rem;
+          }
+          @media (max-width: ${_configSite.lg}px) {
+            font-size: 5.8rem;
+          }
+          @media (max-width: ${_configSite.md}px) {
+            font-size: 4.58rem;
+          }
+          @media (max-width: ${_configSite.sm}px) {
+            font-size: 3.25rem;
+          }
+          @media (max-width: ${_configSite.xs}px) {
+            font-size: 2.6rem;
+          }
+        `}
         >
-        Request a Free
+          Request a Free
         </Title1>
 
         <Title1 css={css`
@@ -80,7 +80,7 @@ export default () => (
         }
       `}
         >
-        Consultation
+          Consultation
         </Title1>
 
         <Title2
@@ -112,16 +112,16 @@ export default () => (
           }
         `}
         >
-        Not sure how to get your website started? Let us help get you on the right path!
+          Not sure how to get your website started? Let us help get you on the right path!
         </Title2>
 
         <div css={css`
-        grid-column: 1 / span 12;
-        text-align: center;
-      `}
+          grid-column: 1 / span 12;
+          text-align: center;
+        `}
         >
           <LinkStyled1 to="/contact">
-          Get Started
+            GET STARTED
           </LinkStyled1>
         </div>
       </Fade>

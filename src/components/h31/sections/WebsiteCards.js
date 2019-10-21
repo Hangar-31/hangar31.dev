@@ -72,7 +72,11 @@ export default () => (
 
       return (
         <Container>
-          <Wrapper>
+          <Wrapper
+            css={css`
+              padding-bottom: 120px !important;
+            `}
+          >
             {articles.map(article => (
               <a
                 href={article.node.frontmatter.website}

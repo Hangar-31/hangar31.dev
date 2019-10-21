@@ -2,6 +2,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import Fade from "react-reveal";
 
 // Components
 import Container from "../layouts/Container";
@@ -32,49 +33,68 @@ export default () => (
   <Container
     css={css`
       background: linear-gradient(180deg, #B6ECFA 0%, #E6EEF5 95.83%);
+      padding-top: 120px;
       padding-bottom: 200px;
       margin-bottom: -200px;
     `}
   >
-    <Wrapper>
-      <ContainerTitle>
-        <Title1 css={css`
-          font-size: 5.5rem !important;
-          grid-column: 3 / span 5;
-          @media (max-width: ${_configSite.lg}px) {
-            font-size: 4rem !important;
-          }
-          @media (max-width: ${_configSite.md}px) {
-            font-size: 3rem !important;
-          }
-          @media (max-width: ${_configSite.sm}px) {
-            order: 2;
-          }
-          @media (max-width: ${_configSite.xs}px) {
-            font-size: 2.5rem !important;
-          }
-        `}
-        >
-          Inquiry Form
-        </Title1>
+    <Wrapper
+      css={css`
+        display: block;
+        grid-gap: 0px;
+        padding: 120px 15px!important;
+        > .react-reveal {
+          ${Wrapper.__emotion_styles}
+          grid-gap: 0px;
+          padding: 0!important;
+        }
+        > .react-reveal:nth-of-type(1) {
+          margin-bottom: 30px;
+        }
+      `}
+    >
+      <Fade bottom>
+        <ContainerTitle>
+          <Title1 css={css`
+            font-size: 5.5rem !important;
+            grid-column: 3 / span 5;
+            @media (max-width: ${_configSite.lg}px) {
+              font-size: 4rem !important;
+            }
+            @media (max-width: ${_configSite.md}px) {
+              font-size: 3rem !important;
+            }
+            @media (max-width: ${_configSite.sm}px) {
+              order: 2;
+            }
+            @media (max-width: ${_configSite.xs}px) {
+              font-size: 2.5rem !important;
+            }
+          `}
+          >
+            Inquiry Form
+          </Title1>
 
-        <ImgLogo cssProp={`
-          width: 180px;
-          @media (max-width: ${_configSite.lg}px) {
-            width: 150px;
-          }
-          @media (max-width: ${_configSite.md}px) {
-            width: 125px;
-          }
-          @media (max-width: ${_configSite.sm}px) {
-            order: 1;
-            margin-bottom: 15px;
-          }
-        `} 
-        />
-      </ContainerTitle>
+          <ImgLogo cssProp={`
+            width: 180px;
+            @media (max-width: ${_configSite.lg}px) {
+              width: 150px;
+            }
+            @media (max-width: ${_configSite.md}px) {
+              width: 125px;
+            }
+            @media (max-width: ${_configSite.sm}px) {
+              order: 1;
+              margin-bottom: 15px;
+            }
+          `} 
+          />
+        </ContainerTitle>
+      </Fade>
 
-      <Form1 formName="Inquiry Form - Contact" />
+      <Fade bottom>
+        <Form1 formName="Inquiry Form - Contact" />
+      </Fade>
       
     </Wrapper>
   </Container>

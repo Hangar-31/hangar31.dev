@@ -6,17 +6,18 @@ import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
 import SectionTitle from "../components/h31/sections/SectionTitle";
 import About from "../components/h31/sections/About";
 import Team from "../components/h31/sections/Team";
+import RequestConsultation from "../components/h31/sections/RequestConsultation";
 
 // Images
-import ImgAirplaneWindow from "../components/images/_home/ImgAirplaneWindow";
-import RequestConsultation from "../components/h31/sections/RequestConsultation";
+import ImgTeamMatthew from "../components/images/team/ImgTeamMatthew";
+import ImgTeamAndrew from "../components/images/team/ImgTeamAndrew";
 
 // Data
 const bios = [
   {
     name: "Matthew Pezzente",
     title: "CEO / Developer",
-    image: <ImgAirplaneWindow />,
+    image: <ImgTeamMatthew />,
     intro: "RAJDHANI REGULAR 30PT ALL CAPS",
     bio: [
       "Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology!",
@@ -26,7 +27,7 @@ const bios = [
   {
     name: "Andrew Pezzente",
     title: "Designer",
-    image: <ImgAirplaneWindow />,
+    image: <ImgTeamAndrew />,
     intro: "RAJDHANI REGULAR 30PT ALL CAPS",
     bio: [
       "Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology!",

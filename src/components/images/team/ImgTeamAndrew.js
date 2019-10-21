@@ -8,7 +8,7 @@ export default ({ cssProp }) => (
     query={graphql`
       query {
         placeholderImage: file(
-          relativePath: { eq: "_home/airplane-wing.png" }
+          relativePath: { eq: "team/hangar-31-team-member-andrew-pezzente.jpg" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1000) {
@@ -20,7 +20,6 @@ export default ({ cssProp }) => (
     `}
     render={data => (
       <Img
-        className="airplane-wing-anime"
         css={css`
           ${cssProp}
         `}

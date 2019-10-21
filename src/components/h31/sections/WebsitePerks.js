@@ -71,18 +71,18 @@ const data = [
   },
   {
     img: <ImgPerkScale />,
-    title: "Scalable Resources",
-    text: "Never worry about your website shutting off or paying for resources your're not using again! All of our websites are hosted on an internationally distributed hosting network, starting at only $10 a month, which only goes up as your website grows!"
+    title: "Scalable Growth",
+    text: "Never worry about your website shutting off or paying extra for resources you're not using again! All of our websites are hosted starting at only $10 a month, and that cost will only increase when you see your own business grow!"
   },
   {
     img: <ImgPerkSEO />,
-    title: "SEO Optimizing",
-    text: "Our websites are developed using cutting edge technology, which allows us to build insanely performant websites and web applications. Trust us, you’ll see the difference!"
+    title: "SEO Value",
+    text: "Being seen online takes a lot of effort, and we are here to help you get started. Each area of your website from content to accessibility are looked through to make sure your reaching your audience."
   },
   {
     img: <ImgPerkGrow />,
     title: "Plan Your Course",
-    text: "As of 2017, mobile devices generate more than 50% of all website traffic. Its Important that your website be formatted and easy to view on any platform!"
+    text: "No two websites are the same, and our goal is to work with you and find the right path forward for your vision to take flight! Whether its budget concerns, technical needs, or uncertainty we are here to help through the process."
   },
   {
     img: <ImgPerk4D />,

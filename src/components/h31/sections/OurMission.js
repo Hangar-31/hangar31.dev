@@ -8,9 +8,7 @@ import Container from "../layouts/Container";
 import Text1 from "../base/Text1";
 import Title2 from "../base/Title2";
 import Wrapper from "../layouts/Wrapper";
-
-// Images
-import ImgAirplaneWindow from "../../images/_home/ImgAirplaneWindow";
+import AnimeAirplaneWing from "../animations/AnimeAirplaneWing";
 
 export default () => (
   <Container>
@@ -29,7 +27,12 @@ export default () => (
           grid-row-gap: 30px;
         }
         > .react-reveal:nth-of-type(2) {
-          grid-column: 9 / span 3;
+          display: block;
+          z-index: -1;
+          position: absolute;
+          width: 1200px;
+          bottom: -130px;
+          right: -630px;
         }
 
         @media (max-width: 1280px) {
@@ -73,14 +76,8 @@ export default () => (
         </div>
       </Fade>
 
-      <Fade right>
-        <ImgAirplaneWindow
-          cssProp={`
-            border: 5px solid #313131;
-            border-radius: 50%;
-            box-shadow: 8px 8px 16px rgba(0,0,0,0.4);
-        `}
-        />
+      <Fade bottom>
+        <AnimeAirplaneWing />
       </Fade>
     </Wrapper>
   </Container>

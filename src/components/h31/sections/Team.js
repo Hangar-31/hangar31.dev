@@ -17,7 +17,7 @@ export default ({ bios }) => (
       css={css`
         display: block;
         > .react-reveal {
-          ${Wrapper._emotion_styles}
+          ${Wrapper.__emotion_styles};
           padding: 0 !important;
         }
       `}

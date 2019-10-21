@@ -20,7 +20,7 @@ const MobileContainer = styled.div`
   width: calc(100% - 60px);
   padding: 30px;
 
-  @media (max-width: ${_configSite.md}) {
+  @media (max-width: ${_configSite.md}px) {
     display: flex;
   }
   @media (max-width: 600px) {
