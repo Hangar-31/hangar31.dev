@@ -47,7 +47,7 @@ export default () => (
           }
         `}
         >
-        Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non velit elementum diam iaculis imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus pulvinar ultrices tortor, a tincidunt risus fermentum in. Nam maximus nunc quam. Pellentesque at posuere ipsum. Etiam volutpat faucibus eros, a sagittis nulla cursus sed. Mauris eget nisi vestibulum, feugiat lacus vitae, dictum nisl.
+          Here at Hangar 31 our vision is a simple one; to make beautiful and personal websites that work effectively, and provide a great experience for everyone who comes through the doors. This means we strive to ensure each website we make not only looks great, but functions properly and effectively to engage your audience and bring your vision and community closer. At the end of the day creating your website should be an enjoyable experience, knowing that you have people on your team that are reliable, honest, and looking out for you. We are your website wingmen, and together lets take your vision to new heights.
         </Text1>
         <div css={css`
           height: 300px;

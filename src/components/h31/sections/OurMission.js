@@ -26,14 +26,6 @@ export default () => (
           grid-auto-rows: min-content;
           grid-row-gap: 30px;
         }
-        > .react-reveal:nth-of-type(2) {
-          display: block;
-          z-index: -1;
-          position: absolute;
-          width: 1200px;
-          bottom: -130px;
-          right: -630px;
-        }
 
         @media (max-width: 1280px) {
           padding-top: 300px;
@@ -76,9 +68,7 @@ export default () => (
         </div>
       </Fade>
 
-      <Fade bottom>
-        <AnimeAirplaneWing />
-      </Fade>
+      <AnimeAirplaneWing />
     </Wrapper>
   </Container>
 );

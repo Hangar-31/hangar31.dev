@@ -18,20 +18,20 @@ const bios = [
     name: "Matthew Pezzente",
     title: "CEO / Developer",
     image: <ImgTeamMatthew />,
-    intro: "RAJDHANI REGULAR 30PT ALL CAPS",
+    intro:
+      "TIME IS VALUABLE, SO LET’S SPEND IT ON THE THINGS THAT MATTER MOST, SUCH AS THE PEOPLE AROUND US.",
     bio: [
-      "Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology!",
-      "Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology!"
+      "Matthew is Hangar 31’s Co-Founder, Full-Stack Web Developer, and Project Manager. He loves helping people integrate technology into their needs and objectives, and often finds that one hour of listening can save weeks of misunderstandings."
     ]
   },
   {
     name: "Andrew Pezzente",
     title: "Designer",
     image: <ImgTeamAndrew />,
-    intro: "RAJDHANI REGULAR 30PT ALL CAPS",
+    intro:
+      "THE VIEW IS AMAZING ABOVE THE CLOUDS, BUT YOU CAN’T SHARE THAT WITH ANYONE UNLESS YOU COME DOWN.",
     bio: [
-      "Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology!",
-      "Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology!"
+      "Andrew is our In-House designer and one of the Co-Founders of Hangar 31. He comes with a background in fine arts, digital design, and an enthusiasm for seeing visions brought to reality!"
     ]
   }
 ];
