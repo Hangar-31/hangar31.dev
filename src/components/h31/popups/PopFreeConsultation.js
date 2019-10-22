@@ -122,14 +122,20 @@ export default () => (
           }
         `}
         >
-          Consultation Text
+          ABOUT THE CONSULTATION
         </Title2>
 
         <Text1 css={css`
           text-align: justify;
         `}
         >
-          Turning personal visions into amazing digital experiences. Our goal is to bring you and your audience closer, through creatively personal design, and seriously powerful technology!
+          We are excited to get to learn about you and your business! Our consultations are free, 1 hour discussions that allows us both to get to know each other, and determine if we are the right fit for your needs. We’ll learn about your business, identify your needs, and discuss a roadmap towards developing your very own online solution.
+        </Text1>
+        <Text1 css={css`
+          text-align: justify;
+        `}
+        >
+          Get in touch with us through phone, email, or by filling out the form below, and we’ll schedule a consultation with you as soon as possible!
         </Text1>
       </div>
 

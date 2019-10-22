@@ -375,7 +375,7 @@ export default class Form1 extends React.Component {
             </Select>
 
             <Label htmlFor="form-subject">
-              Hello, I Would Like To Inquire About...
+              Hello, I Would Like To Inquire About... *
             </Label>
           </P>
 

@@ -95,7 +95,15 @@ export default ({ bios }) => (
         </ImageTeam>
 
         <BioTeam>
-          <Title2>{bio.intro}</Title2>
+          <Title2
+            css={css`
+              font-size: 1.25rem;
+              line-height: 1.25;
+              margin-bottom: 30px;
+            `}
+          >
+            {bio.intro}
+          </Title2>
 
           {bio.bio.map(text => (
             <Text1>{text}</Text1>

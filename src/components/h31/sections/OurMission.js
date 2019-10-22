@@ -11,7 +11,11 @@ import Wrapper from "../layouts/Wrapper";
 import AnimeAirplaneWing from "../animations/AnimeAirplaneWing";
 
 export default () => (
-  <Container>
+  <Container
+    css={css`
+      overflow: hidden;
+    `}
+  >
     <Wrapper
       css={css`
         padding-top: 400px;
@@ -25,6 +29,7 @@ export default () => (
           grid-column: 2 / span 6;
           grid-auto-rows: min-content;
           grid-row-gap: 30px;
+          overflow-x: hidden;
         }
 
         @media (max-width: 1280px) {
@@ -52,17 +57,20 @@ export default () => (
               }
             `}
           >
-            <Title2>Crafting Digital Experiences</Title2>
+            <Title2>LET YOUR WEBSITE TAKE FLIGHT</Title2>
 
-            <Text1>
-              We aim to bring you and your audience closer through creatively
-              tailored websites, that host some serious power under the hood!
-            </Text1>
-
-            <Text1>
-              Add in the ability to scale as you grow, along with our dedication
-              to long-term support, and you&apos;ve got yourself a solid flight
-              plan for your online journey!
+            <Text1
+              css={css`
+                text-align: justify;
+              `}
+            >
+              Welcome to Hangar 31! Chances are, you’re here looking for the
+              right team to help create a standout website that captivates your
+              visitors. And as it happens, it’s our passion to bring that vision
+              to life! By crafting unique and tailored digital experiences, we
+              aim to bring you and your audience closer. Through creative
+              design, some seriously powerful technology, and a commitment to
+              long-term support, we look forward to helping your business soar!
             </Text1>
           </div>
         </div>
