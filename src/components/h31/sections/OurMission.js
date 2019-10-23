@@ -9,6 +9,7 @@ import Text1 from "../base/Text1";
 import Title2 from "../base/Title2";
 import Wrapper from "../layouts/Wrapper";
 import AnimeAirplaneWing from "../animations/AnimeAirplaneWing";
+import _configSite from "../../_configSite";
 
 export default () => (
   <Container
@@ -35,6 +36,16 @@ export default () => (
         @media (max-width: 1280px) {
           padding-top: 300px;
           padding-bottom: 225px;
+        }
+        @media (max-width: ${_configSite.md}px) {
+          > .react-reveal:nth-of-type(1) {
+            grid-column: 2 / span 8;
+          }
+        }
+        @media (max-width: ${_configSite.sm}px) {
+          > .react-reveal:nth-of-type(1) {
+            grid-column: 1 / span 12;
+          }
         }
       `}
     >

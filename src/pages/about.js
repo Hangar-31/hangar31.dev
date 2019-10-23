@@ -41,7 +41,10 @@ const AboutPage = () => {
     <PageWrapperFade>
       <SEO title="" description="" />
 
-      <SectionTitle title="Hangar 31" subtitle="About" />
+      <SectionTitle
+        title="We Make Powerful, Custom, Exciting Websites"
+        subtitle="We make the online world easy to navigate, and explain it in a way that helps you make better decisions to succeed online."
+      />
       <About />
       <Team bios={bios} />
       <RequestConsultation />

@@ -11,7 +11,10 @@ import RequestConsultation from "../components/h31/sections/RequestConsultation"
 const IndexPage = () => {
   return (
     <PageWrapperFade>
-      <SEO title="" description="" />
+      <SEO
+        title="Custom Websites & Web Applications"
+        description="We build custom web solutions that are tailored to your business's brand and needs. Get started with a Free Consultation today!"
+      />
 
       <Masthead />
       <OurMission />

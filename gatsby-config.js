@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "[]",
-    description: "[]",
-    author: "[]",
+    title: "Hangar 31",
+    description: "",
+    author: "Hangar 31 LLC",
     siteUrl: "https://hangar31testing.netlify.com/"
   },
   plugins: [

@@ -7,7 +7,10 @@ import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
 
 const NotFoundPage = () => (
   <PageWrapperFade>
-    <SEO title="" description="" />
+    <SEO
+      title="404 - Sorry, No Page Found"
+      description="There is currently nothing located on this page, please try navigating to a different page."
+    />
   </PageWrapperFade>
 );
 
