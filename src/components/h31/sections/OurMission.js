@@ -38,12 +38,18 @@ export default () => (
           padding-bottom: 225px;
         }
         @media (max-width: ${_configSite.md}px) {
+          padding-top: 200px;
+          padding-bottom: 125px;
           > .react-reveal:nth-of-type(1) {
-            grid-column: 2 / span 8;
+            display: block;
+            grid-column: 2 / span 10;
           }
         }
-        @media (max-width: ${_configSite.sm}px) {
+        @media (max-width: ${_configSite.xs}px) {
+          padding-top: 120px;
+          padding-bottom: 80px;
           > .react-reveal:nth-of-type(1) {
+            display: block;
             grid-column: 1 / span 12;
           }
         }
@@ -55,7 +61,6 @@ export default () => (
             css={css`
               grid-column: 1 / full;
               grid-column-end: inherit;
-              margin-left: -5px;
             `}
           >
             Our Mission
