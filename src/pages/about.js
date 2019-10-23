@@ -39,12 +39,12 @@ const bios = [
 const AboutPage = () => {
   return (
     <PageWrapperFade>
-      <SEO title="" description="" />
-
-      <SectionTitle
+      <SEO
         title="We Make Powerful, Custom, Exciting Websites"
-        subtitle="We make the online world easy to navigate, and explain it in a way that helps you make better decisions to succeed online."
+        description="We make the online world easy to navigate, and explain it in a way that helps you make better decisions to succeed online."
       />
+
+      <SectionTitle title="Hangar 31" subtitle="About" />
       <About />
       <Team bios={bios} />
       <RequestConsultation />
