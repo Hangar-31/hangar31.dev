@@ -14,6 +14,8 @@ const Button = styled.button`
 
   background: ${_configSite.colorPrimary};
   padding: 10px 8px;
+  max-height: 80px;
+  border: none;
 
   color: ${_configSite.colorWhite};
   line-height: 0;
@@ -24,6 +26,7 @@ const Button = styled.button`
   text-transform: uppercase;
 
   text-align: center;
+  cursor: pointer;
 
   @media (max-width: ${_configSite.md}px) {
     font-size: 1.375rem;

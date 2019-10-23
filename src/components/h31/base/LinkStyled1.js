@@ -16,6 +16,7 @@ const Link = styled(TransitionLink)`
 
   background: ${_configSite.colorPrimary};
   padding: 10px 8px;
+  max-height: 60px;
 
   color: ${_configSite.colorWhite};
   line-height: 0;
