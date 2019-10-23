@@ -31,8 +31,8 @@ module.exports = {
         start_url: "/",
         background_color: "[]",
         theme_color: "[]",
-        display: "minimal-ui"
-        // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        display: "minimal-ui",
+        icon: "src/images/hangar-31-logo-black.png"
       }
     },
     // Loads web fonts from Google as specified
