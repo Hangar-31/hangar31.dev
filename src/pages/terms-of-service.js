@@ -6,7 +6,7 @@ import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
 
 const TermsOfServicePage = () => (
   <PageWrapperFade>
-    <SEO title="" description="" />
+    <SEO title="Terms Of Service" description="" />
   </PageWrapperFade>
 );
 

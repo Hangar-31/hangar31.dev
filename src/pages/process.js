@@ -11,7 +11,7 @@ import RequestConsultation from "../components/h31/sections/RequestConsultation"
 const ProcessPage = () => {
   return (
     <PageWrapperFade>
-      <SEO title="" description="" />
+      <SEO title="An Easy Process For Making Websites" description="" />
 
       <SectionTitle title="Our Process" subtitle="About" />
       <Processes />
