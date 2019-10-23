@@ -74,6 +74,9 @@ class Layout extends React.Component {
             margin-top: ${path === "/" ? "calc(80vh - 136px)" : "0px"};
             padding-top: ${excludedPaths.includes(path) ? "0px" : "175px"};
             transition: ${siteLoaded ? "1.5s ease-in-out" : "0s"};
+            min-height: 60vh;
+            padding-bottom: 200px;
+            margin-bottom: -200px;
 
             &:after {
               display: block;
