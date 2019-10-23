@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-wrap-multilines */
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { Global, css } from "@emotion/core";
+import { Global, css, keyframes } from "@emotion/core";
 
 // Components
 import MainNav from "./h31/sections/MainNav";
@@ -12,6 +12,20 @@ import MainNavMobile from "./h31/sections/MainNavMobile";
 
 // Config
 import _configSite from "./_configSite";
+
+const AnimeFadeIn = keyframes`
+  20% {
+    background: rgba(255,255,255,1);
+  }
+
+  99.99% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-99999px);
+    background: rgba(0,0,0,0);
+  }
+`;
 
 class Layout extends React.Component {
   constructor() {
@@ -24,7 +38,9 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ siteLoaded: true });
+    setTimeout(() => {
+      this.setState({ siteLoaded: true });
+    }, 250);
   }
 
   componentWillReceiveProps({ path }) {
@@ -35,8 +51,6 @@ class Layout extends React.Component {
     const excludedPaths = ["/", "", "/free-consultation"];
     const { path, siteLoaded } = this.state;
     const { children } = this.props;
-
-    console.log(path);
 
     return (
       <>
@@ -62,6 +76,19 @@ class Layout extends React.Component {
               background: #ffffff;
               color: #069bd5 !important;
             }
+          `}
+        />
+
+        <div
+          css={css`
+            z-index: 100;
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            background: #ffffff;
+            pointer-events: none;
+
+            animation: ${AnimeFadeIn} 2.5s linear 0s 1 normal forwards;
           `}
         />
 
