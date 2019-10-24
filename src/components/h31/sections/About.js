@@ -34,7 +34,7 @@ export default () => (
           }
         `}
         >
-        RAJDHANI REGULAR 30PT ALL CAPS - HEADERS
+          WE CREATE MORE THAN JUST A WEBSITE
         </Title2>
         <Text1
           css={css`
