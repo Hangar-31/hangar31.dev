@@ -78,9 +78,10 @@ module.exports = {
     // Emotion plugin for Gatsby
     `gatsby-plugin-emotion`,
 
-    // Netlify CMS
-    "gatsby-plugin-netlify-cms",
+    // Netlify
     "gatsby-plugin-netlify",
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-netlify-cache",
 
     // Robots TXT
     "gatsby-plugin-robots-txt",
