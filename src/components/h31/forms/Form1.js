@@ -125,20 +125,6 @@ const Select = styled.select`
   }
 `;
 
-// const Required = (
-//   <span
-//     css={css`
-//       position: absolute;
-//       top: -17px;
-//       left: 0;
-//       color: grey;
-//       font-size: 0.625rem;
-//     `}
-//   >
-//     * Required
-//   </span>
-// );
-
 // Encode Function for Data
 function encode(data) {
   return Object.keys(data)
@@ -339,8 +325,11 @@ export default class Form1 extends React.Component {
               name="Subject"
             >
               <option value="" />
+              <option value="I Would Like To Schedule A Free Consultation.">
+                I Would Like To Schedule A Free Consultation.
+              </option>
               <optgroup label="Websites">
-                <option value="I Want A Website For My Business!">
+                <option value="I Want A Website For My Business.">
                   I Want A Website For My Business!
                 </option>
                 <option value="My Website Needs An Overhaul.">
@@ -362,15 +351,13 @@ export default class Form1 extends React.Component {
               </optgroup>
 
               <optgroup label="General">
-                <option value="I Wanted To Leave A Testimonial!">
+                <option value="I Wanted To Leave A Testimonial.">
                   I Wanted To Leave A Testimonial!
                 </option>
-                <option value="Just Wanted To Say Hi!">
+                <option value="Just Wanted To Say Hi.">
                   Just Wanted To Say Hi!
                 </option>
-                <option value="Something Else You Somehow Missed On This Large List!">
-                  Something Else...
-                </option>
+                <option value="Something Else.">Something Else...</option>
               </optgroup>
             </Select>
 

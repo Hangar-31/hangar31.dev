@@ -33,7 +33,6 @@ export default () => (
   <Container
     css={css`
       background: linear-gradient(180deg, #B6ECFA 0%, #E6EEF5 95.83%);
-      padding-top: 120px;
       padding-bottom: 200px;
       margin-bottom: -200px;
     `}

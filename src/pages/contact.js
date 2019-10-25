@@ -11,7 +11,10 @@ import InquiryForm from "../components/h31/sections/InquiryForm";
 const ContactPage = () => {
   return (
     <PageWrapperFade>
-      <SEO title="" description="" />
+      <SEO
+        title="Contact Us Today!"
+        description="We are available for calls and consultations 5 days a week, at regular business hours. Get in touch with us today and schedule a Free Consultation!"
+      />
 
       <SectionTitle title="Get In Touch" />
       <ContactInformation />

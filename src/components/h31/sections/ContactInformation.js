@@ -12,25 +12,13 @@ import Title4 from "../base/Title4";
 import _configSite from "../../_configSite";
 
 const Grid = styled.section`
-  width: 100%;
   display: grid;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column: 3 / span 8;
-  @media (max-width: ${_configSite.md}px) {
-    grid-column: 2 / span 10;
-  }
-  @media (max-width: ${_configSite.sm}px) {
-    grid-row-gap: 15px;
-  }
-  @media (max-width: ${_configSite.xs}px) {
-    grid-column: 1 / span 12;
-  }
 `;
 
 const ListHours = styled.ul`
   width: 100%;
   padding: 0;
+  margin: 0 0 15px 0;
   list-style: none;
   grid-column: span 3;
 `;
@@ -91,7 +79,7 @@ export default () => (
       css={css`
         display: block;
         padding-bottom: 120px !important;
-        > .react-reveal {
+        > ${Grid} {
           ${Wrapper.__emotion_styles}
           padding: 0 !important;
         }
@@ -100,13 +88,50 @@ export default () => (
       <Grid
         css={css`
           > .react-reveal:nth-of-type(1) {
-            grid-column: span 3;
+            grid-column: 3 / span 8;
+            @media (max-width: ${_configSite.md}px) {
+              grid-column: 2 / span 10;
+            }
+            @media (max-width: ${_configSite.xs}px) {
+              grid-column: 1 / span 12;
+            }
           }
           > .react-reveal:nth-of-type(2) {
-            grid-column: span 3;
+            grid-column: 3 / span 8;
+            @media (max-width: ${_configSite.md}px) {
+              grid-column: 2 / span 10;
+            }
+            @media (max-width: ${_configSite.sm}px) {
+              grid-row-gap: 15px;
+            }
+            @media (max-width: ${_configSite.xs}px) {
+              grid-column: 1 / span 12;
+            }
+          }
+          > .react-reveal:nth-of-type(3) {
+            grid-column: 3 / span 3;
+            @media (max-width: ${_configSite.md}px) {
+              grid-column: 2 / span 3;
+            }
+            @media (max-width: ${_configSite.sm}px) {
+              grid-row-gap: 15px;
+            }
+            @media (max-width: ${_configSite.xs}px) {
+              grid-column: 1 / span 5;
+              margin-bottom: 30px;
+            }
           }
           > .react-reveal:nth-of-type(4) {
-            grid-column: span 2;
+            grid-column: 6 / span 5;
+            @media (max-width: ${_configSite.md}px) {
+              grid-column: 5 / span 5;
+            }
+            @media (max-width: ${_configSite.sm}px) {
+              grid-row-gap: 15px;
+            }
+            @media (max-width: ${_configSite.xs}px) {
+              grid-column: 1 / span 12;
+            }
           }
         `}
       >
