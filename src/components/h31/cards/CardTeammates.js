@@ -29,7 +29,7 @@ const ItemTeam = styled.li`
   grid-template-columns: 1fr 1fr;
   min-height: 400px;
   overflow: hidden;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
 `;
 

@@ -330,7 +330,7 @@ export default class Form1 extends React.Component {
               </option>
               <optgroup label="Websites">
                 <option value="I Want A Website For My Business.">
-                  I Want A Website For My Business!
+                  I Want A Website For My Business.
                 </option>
                 <option value="My Website Needs An Overhaul.">
                   My Website Needs An Overhaul.
@@ -338,6 +338,9 @@ export default class Form1 extends React.Component {
                 <option value="I Need To Convert My Website To Something Faster and More Secure.">
                   I Need To Convert My Website To Something Faster and More
                   Secure.
+                </option>
+                <option value="I Need A Web Team To Grow With Long-Term.">
+                  I Need A Web Team To Grow With Long-Term.
                 </option>
               </optgroup>
 
@@ -352,12 +355,12 @@ export default class Form1 extends React.Component {
 
               <optgroup label="General">
                 <option value="I Wanted To Leave A Testimonial.">
-                  I Wanted To Leave A Testimonial!
+                  I Wanted To Leave A Testimonial.
                 </option>
                 <option value="Just Wanted To Say Hi.">
-                  Just Wanted To Say Hi!
+                  Just Wanted To Say Hi.
                 </option>
-                <option value="Something Else.">Something Else...</option>
+                <option value="Something Else...">Something Else...</option>
               </optgroup>
             </Select>
 
@@ -502,10 +505,18 @@ export default class Form1 extends React.Component {
               text-align: right;
             `}
           >
-            <SubmitButton type="submit">
+            <SubmitButton
+              cssProp={css`
+                ${submitting === 1 && "color: rgba(0,0,0,0.5) !important;"}
+                ${submitting !== 0 &&
+                  "pointer-events: none !important;"}
+                transition: 0.4s;
+              `}
+              type="submit"
+            >
               {submitting === 0 && "Send"}
-              {submitting === 1 && <div />}
-              {submitting === 2 && "Sent"}
+              {submitting === 1 && "Sending..."}
+              {submitting === 2 && "Message Sent!"}
             </SubmitButton>
           </P>
         </Fieldset>

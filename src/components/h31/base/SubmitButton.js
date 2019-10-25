@@ -50,10 +50,11 @@ const animeBreathe = keyframes`
   }
 `;
 
-export default ({ children }) => (
+export default ({ children, cssProp }) => (
   <Button
     type="submit"
     css={css`
+      ${cssProp}
       &:hover {
         background: ${_configSite.colorQuintery};
         animation: ${animeBreathe} 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) 0.5s
