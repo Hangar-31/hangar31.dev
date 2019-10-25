@@ -23,6 +23,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 spaceship that launches powerfully like your website"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}

@@ -21,6 +21,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 search console that shows your website as the top listing"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}

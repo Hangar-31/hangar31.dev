@@ -25,6 +25,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 team member matt pezzente, dashing young man with a mission to help people"
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}

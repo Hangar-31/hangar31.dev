@@ -23,6 +23,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 team member andrew pezzente, a fine looking gentleman who wants to make your website look amazing"
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}

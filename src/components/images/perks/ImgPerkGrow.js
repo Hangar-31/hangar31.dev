@@ -21,6 +21,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 growth chart for how your website can grow"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}

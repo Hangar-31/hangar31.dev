@@ -21,6 +21,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 logo featuring an airplane at the center, surrounding by hangar walls that look like an H"
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}

@@ -21,6 +21,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 power meter showing performance of your website"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}

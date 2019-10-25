@@ -23,6 +23,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 modern airplane representing modern websites"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}

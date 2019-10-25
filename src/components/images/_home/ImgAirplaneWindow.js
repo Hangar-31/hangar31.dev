@@ -24,6 +24,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 airplane wing that moves as you scroll"
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}

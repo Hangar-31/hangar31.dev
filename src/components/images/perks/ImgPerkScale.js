@@ -21,6 +21,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 scalability for websites"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}

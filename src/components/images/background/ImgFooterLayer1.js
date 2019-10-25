@@ -17,6 +17,11 @@ export default () => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => (
+      <Img
+        alt="cloud layer for background design"
+        fluid={data.placeholderImage.childImageSharp.fluid}
+      />
+    )}
   />
 );

@@ -21,6 +21,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
+        alt="hangar 31 mobile device that loads websites fast"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}
