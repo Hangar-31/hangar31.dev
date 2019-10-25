@@ -17,6 +17,7 @@ export default () => (
     `}
     render={data => (
       <Img
+        loading="eager"
         alt="cloud layer for background design"
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
