@@ -195,7 +195,7 @@ export default class extends React.Component {
         </WrapperLogo>
 
         <MobileButtonOpen
-          name="open mobile menu button"
+          aria-label="open mobile menu button"
           onClick={() => this.hideMenu()}
         >
           <svg
@@ -255,7 +255,7 @@ export default class extends React.Component {
           </WrapperLogo>
 
           <MobileButtonClose
-            name="close mobile menu button"
+            aria-label="close mobile menu button"
             onClick={() => this.hideMenu()}
           >
             <svg
