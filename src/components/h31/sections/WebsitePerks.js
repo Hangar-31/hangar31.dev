@@ -102,19 +102,20 @@ export default () => (
         {data.map(perk => (
           <ItemPerk>
             <Fade left>
-              <WrapperImage>
-                {perk.img}
-              </WrapperImage>
-              <Title3
-                css={css`
+              <>
+                <WrapperImage>
+                  {perk.img}
+                </WrapperImage>
+                <Title3
+                  css={css`
                   text-align: center;
                 `}
-              >
-                {perk.title}
-              </Title3>
-              {perk.title !== "Our 4D Process" && (
-                <Text1
-                  css={css`
+                >
+                  {perk.title}
+                </Title3>
+                {perk.title !== "Our 4D Process" && (
+                  <Text1
+                    css={css`
                       text-align: justify;
                       display: inline-block;
                       color: ${_configSite.colorOffWhite};
@@ -124,19 +125,20 @@ export default () => (
                         margin: 0 auto;
                       }
                     `}
-                >
-                  {perk.text}
-                </Text1>
+                  >
+                    {perk.text}
+                  </Text1>
                 )}
-              {perk.title === "Our 4D Process" && (
-                <div css={css`
+                {perk.title === "Our 4D Process" && (
+                  <div css={css`
                       width: 100%;
                       text-align: center;
                     `}
-                >
-                  {perk.text}
-                </div>
+                  >
+                    {perk.text}
+                  </div>
                 )}
+              </>
             </Fade>
           </ItemPerk>
           ))}
