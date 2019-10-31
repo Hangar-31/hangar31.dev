@@ -56,7 +56,7 @@ export default () => (
                 website
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 800) {
+                    fluid(maxWidth: 800, quality: 40) {
                       ...GatsbyImageSharpFluid
                     }
                   }

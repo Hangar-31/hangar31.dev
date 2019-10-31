@@ -7,6 +7,14 @@ module.exports = {
   },
   plugins: [
     // Images Folder Sourcing
+    // File sourcing into Gatsby for use with Gatsby Image and Filesystem API
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/static/assets`
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -59,9 +67,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-relative-images`
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1000
+              maxWidth: 800
             }
           }
         ]
