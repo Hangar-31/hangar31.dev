@@ -34,11 +34,11 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "[]",
-        short_name: "[]",
+        name: "Hangar 31",
+        short_name: "Hangar 31",
         start_url: "/",
-        background_color: "[]",
-        theme_color: "[]",
+        background_color: "#0499D4",
+        theme_color: "#ffffff",
         display: "minimal-ui",
         icon: "src/images/hangar-31-logo-black.png"
       }
