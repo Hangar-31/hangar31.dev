@@ -120,7 +120,7 @@ export default () => (
           text-align: center;
         `}
         >
-          <LinkStyled1 to="/contact">
+          <LinkStyled1 name="get started with a free consultation" to="/free-consultation">
             GET STARTED
           </LinkStyled1>
         </div>

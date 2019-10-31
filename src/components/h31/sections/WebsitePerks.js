@@ -87,7 +87,7 @@ const data = [
   {
     img: <ImgPerk4D />,
     title: "Our 4D Process",
-    text: <LinkStyled1 to="/process">Check it Out</LinkStyled1>
+    text: <LinkStyled1 name="4d process page link" to="/process">Check it Out</LinkStyled1>
   }
 ]
 
@@ -99,47 +99,47 @@ export default () => (
   >
     <Wrapper>
       <ListPerk>
-        <Fade left cascade>
-          {data.map(perk => (
-            <ItemPerk>
+        {data.map(perk => (
+          <ItemPerk>
+            <Fade left>
               <WrapperImage>
                 {perk.img}
               </WrapperImage>
               <Title3
                 css={css`
-              text-align: center;
-            `}
+                  text-align: center;
+                `}
               >
                 {perk.title}
               </Title3>
               {perk.title !== "Our 4D Process" && (
                 <Text1
                   css={css`
-                  text-align: justify;
-                  display: inline-block;
-                  color: ${_configSite.colorOffWhite};
-                  @media(max-width: 700px) {
-                    display: block;
-                    max-width: 500px;
-                    margin: 0 auto;
-                  }
-                `}
+                      text-align: justify;
+                      display: inline-block;
+                      color: ${_configSite.colorOffWhite};
+                      @media(max-width: 700px) {
+                        display: block;
+                        max-width: 500px;
+                        margin: 0 auto;
+                      }
+                    `}
                 >
                   {perk.text}
                 </Text1>
-            )}
+                )}
               {perk.title === "Our 4D Process" && (
                 <div css={css`
-                  width: 100%;
-                  text-align: center;
-                `}
+                      width: 100%;
+                      text-align: center;
+                    `}
                 >
                   {perk.text}
                 </div>
-            )}
-            </ItemPerk>
+                )}
+            </Fade>
+          </ItemPerk>
           ))}
-        </Fade>
       </ListPerk>
     </Wrapper>
   </Container>
