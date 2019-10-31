@@ -9,7 +9,7 @@ export default () => (
         placeholderImage: file(relativePath: { eq: "background/layer-3.png" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }

@@ -9,8 +9,8 @@ export default ({ cssProp }) => (
       query {
         placeholderImage: file(relativePath: { eq: "logo-white-3.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
