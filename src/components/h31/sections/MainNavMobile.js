@@ -194,7 +194,10 @@ export default class extends React.Component {
           </div>
         </WrapperLogo>
 
-        <MobileButtonOpen onClick={() => this.hideMenu()}>
+        <MobileButtonOpen
+          name="open mobile menu button"
+          onClick={() => this.hideMenu()}
+        >
           <svg
             width="32"
             height="32"
@@ -251,7 +254,10 @@ export default class extends React.Component {
             </div>
           </WrapperLogo>
 
-          <MobileButtonClose onClick={() => this.hideMenu()}>
+          <MobileButtonClose
+            name="close mobile menu button"
+            onClick={() => this.hideMenu()}
+          >
             <svg
               width="32"
               height="32"
