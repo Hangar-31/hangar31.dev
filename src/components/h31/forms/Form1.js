@@ -4,13 +4,15 @@ import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 
+// Config
+import _configSite from "../../_configSite";
+
 // Images
 import ImgDownCarrot from "../../images/accents/down-carrot.svg";
 
 // Components
 import SubmitButton from "../base/SubmitButton";
 import Text1 from "../base/Text1";
-import _configSite from "../../_configSite";
 
 // Shared CSS
 const focusCSS = `
@@ -213,6 +215,8 @@ export default class Form1 extends React.Component {
     } else {
       target.labels[0].removeAttribute("style");
     }
+
+    console.log(target.value);
 
     this.setState({ [target.name]: target.value });
   }
@@ -471,7 +475,7 @@ export default class Form1 extends React.Component {
               id="form-current-website"
               onChange={this.handleChange}
               type="text"
-              name="Current Website"
+              name="CurrentWebsite"
               value={CurrentWebsite}
             />
 
