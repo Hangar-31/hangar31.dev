@@ -46,8 +46,6 @@ export default () => (
           }
         }
         @media (max-width: ${_configSite.xs}px) {
-          padding-top: 120px;
-          padding-bottom: 80px;
           > .react-reveal:nth-of-type(1) {
             display: block;
             grid-column: 1 / span 12;

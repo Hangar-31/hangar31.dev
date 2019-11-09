@@ -85,7 +85,7 @@ export default ({ bios }) => (
               position: absolute;
               bottom: 0px;
               left: 15px;
-              font-size: 1rem;
+              font-size: 1rem !important;
               color: ${_configSite.colorWhite} !important;
               text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
             `}

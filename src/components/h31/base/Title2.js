@@ -15,12 +15,12 @@ export default styled.h3`
   color: ${_configSite.colorBlack};
 
   @media (max-width: 1100px) {
-    font-size: 1.75rem;
-  }
-  @media (max-width: 880px) {
     font-size: 1.5rem;
   }
-  @media (max-width: 630px) {
+  @media (max-width: 880px) {
     font-size: 1.25rem;
+  }
+  @media (max-width: 630px) {
+    font-size: 1.125rem;
   }
 `;
