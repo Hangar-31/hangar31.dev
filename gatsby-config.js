@@ -115,6 +115,7 @@ module.exports = {
     // Remove the trailing slashes from pathing
     "gatsby-plugin-remove-trailing-slashes",
 
+    // Google Analytics
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
