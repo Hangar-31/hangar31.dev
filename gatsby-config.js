@@ -113,6 +113,13 @@ module.exports = {
     "gatsby-plugin-eslint",
 
     // Remove the trailing slashes from pathing
-    "gatsby-plugin-remove-trailing-slashes"
+    "gatsby-plugin-remove-trailing-slashes",
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-127004091-1"
+      }
+    }
   ]
 };
