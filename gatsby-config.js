@@ -115,6 +115,16 @@ module.exports = {
     // Remove the trailing slashes from pathing
     "gatsby-plugin-remove-trailing-slashes",
 
+    // Contentful Data Sourcing
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `hqvcqkzjo6y3`,
+        accessToken: `jUNNsprbopsg_32M4CDqklBNyGjoK0vnFo6hO7dVXgs`,
+        host: `preview.contentful.com`
+      }
+    },
+
     // Google Analytics
     {
       resolve: `gatsby-plugin-google-analytics`,
