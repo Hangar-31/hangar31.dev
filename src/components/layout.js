@@ -18,7 +18,7 @@ const AnimeFadeIn = keyframes`
     background: rgba(255,255,255,1);
   }
 
-  99.99% {
+  99.999% {
     transform: translateX(0);
   }
   100% {
