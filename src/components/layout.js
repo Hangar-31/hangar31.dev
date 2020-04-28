@@ -41,6 +41,9 @@ class Layout extends React.Component {
     setTimeout(() => {
       this.setState({ siteLoaded: true });
     }, 250);
+    if (typeof window === "undefined") return;
+    // eslint-disable-next-line no-undef
+    this.setState({ path: window.location.pathname });
   }
 
   componentWillReceiveProps({ path }) {
@@ -48,7 +51,13 @@ class Layout extends React.Component {
   }
 
   render() {
-    const excludedPaths = ["/", "", "/free-consultation"];
+    if (typeof window === "undefined") return <></>;
+    const excludedPaths = [
+      "/",
+      "",
+      "/free-consultation",
+      "/free-consultation/"
+    ];
     const { path, siteLoaded } = this.state;
     const { children } = this.props;
 
