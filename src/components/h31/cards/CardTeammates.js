@@ -88,6 +88,7 @@ export default ({ bios }) => (
               font-size: 1rem !important;
               color: ${_configSite.colorWhite} !important;
               text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+              text-transform: uppercase;
             `}
           >
             {bio.title}

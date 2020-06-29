@@ -11,6 +11,7 @@ import RequestConsultation from "../components/h31/sections/RequestConsultation"
 // Images
 import ImgTeamMatthew from "../components/images/team/ImgTeamMatthew";
 import ImgTeamAndrew from "../components/images/team/ImgTeamAndrew";
+import ImgTeamRachel from "../components/images/team/ImgTeamRachel";
 
 // Data
 const bios = [
@@ -31,6 +32,15 @@ const bios = [
     intro: '"DREAMS BECOME REALITY WHEN PURSUED BEYOND THE HORIZON."',
     bio: [
       "Andrew is our In-House designer and one of the Co-Founders of Hangar 31. He comes with a background in fine arts, digital design, and an enthusiasm for seeing visions brought to reality!"
+    ]
+  },
+  {
+    name: "Rachel Higley",
+    title: "Chief Smile Enforcer",
+    image: <ImgTeamRachel />,
+    intro: '"Dream bigger than you think is possible."',
+    bio: [
+      "Rachel is our tech lead who takes everything that is beautiful and makes it a reality you can touch. With over 15 years in the industry she is able to bring to life even your biggest dreams."
     ]
   }
 ];
