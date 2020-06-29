@@ -17,7 +17,7 @@ import ImgTeamRachel from "../components/images/team/ImgTeamRachel";
 const bios = [
   {
     name: "Matthew Pezzente",
-    title: "CEO / Developer",
+    title: "CEO / Project Manager",
     image: <ImgTeamMatthew />,
     intro:
       '"TIME IS VALUABLE, SO LET’S SPEND IT ON THE THINGS THAT MATTER MOST, LIKE THE PEOPLE AROUND US."',
@@ -27,7 +27,7 @@ const bios = [
   },
   {
     name: "Andrew Pezzente",
-    title: "Designer",
+    title: "Design Lead",
     image: <ImgTeamAndrew />,
     intro: '"DREAMS BECOME REALITY WHEN PURSUED BEYOND THE HORIZON."',
     bio: [
@@ -36,7 +36,7 @@ const bios = [
   },
   {
     name: "Rachel Higley",
-    title: "Chief Smile Enforcer",
+    title: "Tech Lead",
     image: <ImgTeamRachel />,
     intro: '"Dream bigger than you think is possible."',
     bio: [
