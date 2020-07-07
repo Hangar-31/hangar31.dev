@@ -115,6 +115,16 @@ module.exports = {
     // Remove the trailing slashes from pathing
     "gatsby-plugin-remove-trailing-slashes",
 
+    // Hubspot integration
+    {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+        trackingCode: "7975513",
+        respectDNT: true,
+        productionOnly: false
+      }
+    },
+
     // Google Analytics
     {
       resolve: `gatsby-plugin-google-analytics`,
