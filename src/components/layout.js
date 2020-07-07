@@ -5,6 +5,7 @@ import React from "react";
 import { Global, css, keyframes } from "@emotion/core";
 
 // Components
+import { Helmet } from "react-helmet";
 import MainNav from "./h31/sections/MainNav";
 import AnimeSiteBackground from "./h31/animations/AnimeSiteBackground";
 import Footer from "./h31/sections/Footer";
@@ -87,6 +88,15 @@ class Layout extends React.Component {
             }
           `}
         />
+        <Helmet>
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/7975513.js"
+          />
+        </Helmet>
 
         <div
           css={css`
