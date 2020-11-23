@@ -45,20 +45,13 @@ module.exports = {
     },
     // Loads web fonts from Google as specified
     {
-      resolve: "gatsby-plugin-prefetch-google-fonts",
+      resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: [
-          {
-            family: `Rajdhani`,
-            subsets: [`latin`],
-            variants: [`bold`, `regular`, `light`]
-          },
-          {
-            family: `Open Sans`,
-            subsets: [`latin`],
-            variants: [`regular`]
-          }
-        ]
+            `Rajdhani\:bold,regular,light`,
+            `Open Sans\:regular`,
+        ],
+        display: 'swap'
       }
     },
     // Makes field "markdownRemark" queryable
