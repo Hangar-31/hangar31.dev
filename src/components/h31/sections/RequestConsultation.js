@@ -112,7 +112,7 @@ export default () => (
           }
         `}
         >
-          Not sure how to get your website started? Let us help get you on the right path!
+          Not sure how to get started? Let us get you on the right path!
         </Title2>
 
         <div css={css`

@@ -12,7 +12,7 @@ const ContactPage = () => {
   return (
     <PageWrapperFade>
       <SEO
-        title="Contact Us Today!"
+        title="Contact Us"
         description="We are available for calls and consultations 5 days a week, at regular business hours. Get in touch with us today and schedule a Free Consultation!"
       />
 

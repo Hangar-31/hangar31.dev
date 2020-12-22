@@ -29,8 +29,12 @@ export default {
       to: "/about"
     },
     {
-      name: "Process",
-      to: "/process"
+      name: "Services",
+      to: "/services"
+    },
+    {
+      name: "Apps",
+      to: "/web-applications"
     },
     {
       name: "Websites",

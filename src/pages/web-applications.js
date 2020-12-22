@@ -3,24 +3,24 @@ import React from "react";
 // Components
 // import Layout from "../components/layout";
 import SEO from "../components/seo";
-import WebsiteCards from "../components/h31/sections/WebsiteCards";
 import SectionTitle from "../components/h31/sections/SectionTitle";
 import PageWrapperFade from "../components/h31/animations/PageWrapperFade";
 import RequestConsultation from "../components/h31/sections/RequestConsultation";
+import WebAppCards from "../components/h31/sections/WebAppCards";
 
-const WebsitesPage = () => {
+const WebApplicationsPage = () => {
   return (
     <PageWrapperFade>
       <SEO
-        title="Websites"
-        description="We develop a wide arrange of websites that typically need custom, streamlined features built in that work for our client's needs."
+        title="Web Applications"
+        description="We develop a wide arrange of web applications from simple tools, to membership applications, using technologies such as: React, Next.js, Node, Express, GraphQL and PostgreSQL"
       />
 
-      <SectionTitle title="Websites" subtitle="Our" />
-      <WebsiteCards />
+      <SectionTitle title="Web Apps" subtitle="Our" />
+      <WebAppCards />
       <RequestConsultation />
     </PageWrapperFade>
   );
 };
 
-export default WebsitesPage;
+export default WebApplicationsPage;

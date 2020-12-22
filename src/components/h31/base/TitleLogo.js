@@ -11,6 +11,7 @@ export default styled.p`
   font-family: ${_configSite.fontPrimary};
   font-weight: regular;
   text-transform: uppercase;
+  white-space: nowrap;
 
   color: ${_configSite.colorWhite};
 `;

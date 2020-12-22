@@ -12,8 +12,8 @@ const IndexPage = () => {
   return (
     <PageWrapperFade>
       <SEO
-        title="Custom Websites & Web Applications"
-        description="We build custom web solutions that are tailored to your business's brand and needs. Get started with a Free Consultation today!"
+        title="Web Application Development"
+        description="We assist companies, organizations and individuals develop web solutions that save time, scale for growth, and solve business problems. We accomplish this by translating visions and ideas into tailored, web based tools that utilize cutting-edge technology. Get started today a free consultation!"
       />
 
       <Masthead />

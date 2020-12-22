@@ -46,7 +46,7 @@ export default () => (
         }
       `}
     >
-      Website Design & Development
+      Web Application Development
     </TitleLogo>
   </Container>
 );

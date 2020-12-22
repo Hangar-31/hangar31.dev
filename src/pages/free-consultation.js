@@ -9,8 +9,8 @@ const IndexPage = () => {
   return (
     <PageWrapperFade>
       <SEO
-        title="Free Website Consultation"
-        description="Find out if we are the right fit for your business's online needs by scheduling a Free Consulation today! "
+        title="Free Consultation"
+        description="Find out if we are the right fit for your development needs by scheduling a Free Consulation today! "
       />
 
       <PopFreeConsultation />

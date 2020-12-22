@@ -12,6 +12,7 @@ import RequestConsultation from "../components/h31/sections/RequestConsultation"
 import ImgTeamMatthew from "../components/images/team/ImgTeamMatthew";
 import ImgTeamAndrew from "../components/images/team/ImgTeamAndrew";
 import ImgTeamRachel from "../components/images/team/ImgTeamRachel";
+import ImgTeamJennifer from "../components/images/team/ImgTeamJennifer";
 
 // Data
 const bios = [
@@ -26,8 +27,17 @@ const bios = [
     ]
   },
   {
+    name: "Rachel Higley",
+    title: "Tech Lead",
+    image: <ImgTeamRachel />,
+    intro: '"Dream bigger than you think is possible."',
+    bio: [
+      "Rachel is our tech lead who takes everything that is beautiful and makes it a reality you can touch. With over 15 years in the industry she is able to bring to life even your biggest dreams."
+    ]
+  },
+  {
     name: "Andrew Pezzente",
-    title: "Design Lead",
+    title: "Creative Lead",
     image: <ImgTeamAndrew />,
     intro: '"DREAMS BECOME REALITY WHEN PURSUED BEYOND THE HORIZON."',
     bio: [
@@ -35,12 +45,12 @@ const bios = [
     ]
   },
   {
-    name: "Rachel Higley",
-    title: "Tech Lead",
-    image: <ImgTeamRachel />,
-    intro: '"Dream bigger than you think is possible."',
+    name: "Jennifer Avila",
+    title: "Graphic Designer",
+    image: <ImgTeamJennifer />,
+    intro: '"All we have to decide is what to do with the time given to us."',
     bio: [
-      "Rachel is our tech lead who takes everything that is beautiful and makes it a reality you can touch. With over 15 years in the industry she is able to bring to life even your biggest dreams."
+      "Andrew is our In-House designer and one of the Co-Founders of Hangar 31. He comes with a background in fine arts, digital design, and an enthusiasm for seeing visions brought to reality!"
     ]
   }
 ];
@@ -49,8 +59,8 @@ const AboutPage = () => {
   return (
     <PageWrapperFade>
       <SEO
-        title="We Make Powerful, Custom, Exciting Websites"
-        description="We make the online world easy to navigate, and explain it in a way that helps you make better decisions to succeed online."
+        title="About Us"
+        description="We leverage web technologies to create tools and solutions for businesses, orginizations and individuals. We also specialize in remote workflows for our development process in light of the Covid-19 pandemic."
       />
 
       <SectionTitle title="Hangar 31" subtitle="About" />

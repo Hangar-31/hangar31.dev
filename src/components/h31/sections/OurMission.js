@@ -71,20 +71,19 @@ export default () => (
               }
             `}
           >
-            <Title2>LET YOUR WEBSITE TAKE FLIGHT</Title2>
+            <Title2>Solving Problems With Web Technology</Title2>
 
             <Text1
               css={css`
-                text-align: justify;
+                text-align: left;
               `}
             >
-              Welcome to Hangar 31! Chances are, you’re here looking for the
-              right team to help create a standout website that captivates your
-              visitors. And as it happens, it’s our passion to bring that vision
-              to life! By crafting unique and tailored digital experiences, we
-              aim to bring you and your audience closer. Through creative
-              design, some seriously powerful technology, and a commitment to
-              long-term support, we look forward to helping your business soar!
+              We assist companies and individuals develop web solutions that
+              save time, scale for growth, and solve business problems. We
+              accomplish this by translating visions and ideas into tailored,
+              web based tools that utilize cutting-edge technology. We also work
+              with non-technical clients by helping them understand and
+              strategize how to leverage the web to solve existing problems.
             </Text1>
           </div>
         </div>

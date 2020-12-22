@@ -11,7 +11,7 @@ import _config from "../../_configSite";
 import ImgLogo from "../../images/ImgLogo";
 import MainLink from "../base/MainLink";
 import MainLinkButton from "../base/MainLinkButton";
-import TitleLogo from "../base/TitleLogo";
+// import TitleLogo from "../base/TitleLogo";
 
 // Styled Components
 const Container = styled.nav`
@@ -30,7 +30,7 @@ const Container = styled.nav`
 const WrapperLogo = styled(TransitionLink)`
   display: flex;
   align-items: center;
-  max-width: 300px;
+  max-width: 350px;
   
   text-decoration: none;
 
@@ -71,17 +71,14 @@ export default ({ path }) => (
       <div
         css={css`
           width: 125px;
-          margin-right: 45px;
+          margin-right: 30px;
           @media(max-width: 1100px) {
-            margin-right: 30px;
+            margin-right: 15px;
           }
         `}
       >
         <ImgLogo />
       </div>
-      <TitleLogo>
-        Hangar31.dev
-      </TitleLogo>
     </WrapperLogo>
 
     <ListLinks>

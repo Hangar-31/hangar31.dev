@@ -17,9 +17,10 @@ import ImgPerkMobile from "../../images/perks/ImgPerkMobile";
 import ImgPerkScale from "../../images/perks/ImgPerkScale";
 import ImgPerkSEO from "../../images/perks/ImgPerkSEO";
 import ImgPerkGrow from "../../images/perks/ImgPerkGrow";
-import ImgPerk4D from "../../images/perks/ImgPerk4D";
+// import ImgPerk4D from "../../images/perks/ImgPerk4D";
 import LinkStyled1 from "../base/LinkStyled1";
-import LinkInlineText from "../base/LinkInlineText";
+import ImgProcessDeploy from "../../images/processes/ImgProcessDeploy";
+// import LinkInlineText from "../base/LinkInlineText";
 
 // Styled Components
 const ListPerk = styled.ul`
@@ -56,38 +57,35 @@ const WrapperImage = styled.div`
 const data = [
   {
     img: <ImgPerkSpeed />,
-    title: "Fast Performance",
-    text: (
-      <>
-        Our websites are developed using cutting edge technology, which allows us to build insanely performant websites and web applications. Check out some of our work, and&nbsp;
-        <LinkInlineText to="/websites">see the difference!</LinkInlineText>
-      </>
-    )
+    title: "Fast, Modern Technology",
+    text: "We utilize modern frameworks like Next.js and Node to deliver faster applications that are  ready to scale. Keeping up on the latest web technology is essential not only for application preformance, but also for security and scalability."
   },
   {
     img: <ImgPerkMobile />,
-    title: "Incredibly Mobile",
-    text: "As of 2019, mobile devices generate almost 50% of all website traffic. Our websites are made to meet the demands of mobile users through fast load times, and mobile UI designs that work for phones, tablets, and more!"
+    title: "Mobile Ready",
+    text: "Thanks to advancements in browser caching technology, web applications can be utilized like native mobile applications through Progressive Web Apps (PWA). This means applications can be built faster for less money, and are easier to maintain than native mobile apps from the app store."
   },
   {
     img: <ImgPerkScale />,
-    title: "Scalable Growth",
-    text: "Never worry about your website shutting off or paying extra for resources you're not using again! All of our websites are hosted starting at only $10 a month, and that cost will only increase when you see your own business grow!"
+    title: "Built To Scale",
+    text: "From inception to enterprise, we can build apps ranging from personal use tools, to membership portals that host millions of users! We also commit to being agile in our approach, which allows us to adjust our development approach based on an applications scope and scale."
   },
   {
-    img: <ImgPerkSEO />,
-    title: "SEO Value",
-    text: "Being seen online takes a lot of effort, and we are here to help you get started. Each area of your website from content to accessibility are looked through to make sure your reaching your audience."
+    img: <ImgProcessDeploy />,
+    title: "Long Term Support",
+    text: "We commit to supporting your application for the years to come through maintenance, feature planning, infrastructure updates, verion bumps, and more! We like to stay connected with our clients and support the apps we build for them!"
   },
   {
     img: <ImgPerkGrow />,
-    title: "Plan Your Course",
-    text: "No two websites are the same, and our goal is to work with you and find the right path forward for your vision to take flight! Whether its budget concerns, technical needs, or uncertainty we are here to help through the process."
+    full: true,
+    title: "Check Out Our Apps!",
+    text: <LinkStyled1 name="applications portfolio link" to="/web-applications">Applications</LinkStyled1>
   },
   {
-    img: <ImgPerk4D />,
-    title: "Our 4D Process",
-    text: <LinkStyled1 name="4d process page link" to="/process">Check it Out</LinkStyled1>
+    img: <ImgPerkSEO />,
+    full: true,
+    title: "Check Out Our Websites!",
+    text: <LinkStyled1 name="websites portfolio link" to="/websites">Websites</LinkStyled1>
   }
 ]
 
@@ -113,7 +111,7 @@ export default () => (
                 >
                   {perk.title}
                 </Title3>
-                {perk.title !== "Our 4D Process" && (
+                {!perk.full && (
                   <Text1
                     css={css`
                       text-align: justify;
@@ -129,7 +127,7 @@ export default () => (
                     {perk.text}
                   </Text1>
                 )}
-                {perk.title === "Our 4D Process" && (
+                {perk.full && (
                   <div css={css`
                       width: 100%;
                       text-align: center;

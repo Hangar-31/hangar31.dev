@@ -8,11 +8,11 @@ export default ({ cssProp }) => (
     query={graphql`
       query {
         placeholderImage: file(
-          relativePath: { eq: "processes/hangar-31-process-deploy.png" }
+          relativePath: { eq: "team/hangar-31-team-member-jennifer-avila.jpg" }
         ) {
           childImageSharp {
-            fixed(width: 80) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -23,8 +23,8 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
-        alt="hangar 31 spaceship that launches powerfully like your website"
-        fixed={data.placeholderImage.childImageSharp.fixed}
+        alt="hangar 31 team member Jennifer Avila is full of creativity in every design she creates."
+        fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}
   />

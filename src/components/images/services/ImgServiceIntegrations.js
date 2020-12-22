@@ -8,10 +8,10 @@ export default ({ cssProp }) => (
     query={graphql`
       query {
         placeholderImage: file(
-          relativePath: { eq: "processes/hangar-31-process-deploy.png" }
+          relativePath: { eq: "services/hangar-31-service-integrations.png" }
         ) {
           childImageSharp {
-            fixed(width: 80) {
+            fixed(width: 300) {
               ...GatsbyImageSharpFixed
             }
           }
@@ -23,7 +23,7 @@ export default ({ cssProp }) => (
         css={css`
           ${cssProp}
         `}
-        alt="hangar 31 spaceship that launches powerfully like your website"
+        alt="hangar 31 api layers"
         fixed={data.placeholderImage.childImageSharp.fixed}
       />
     )}
