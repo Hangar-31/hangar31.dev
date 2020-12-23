@@ -50,7 +50,7 @@ const bios = [
     image: <ImgTeamJennifer />,
     intro: '"All we have to decide is what to do with the time given to us."',
     bio: [
-      "Andrew is our In-House designer and one of the Co-Founders of Hangar 31. He comes with a background in fine arts, digital design, and an enthusiasm for seeing visions brought to reality!"
+      "Jennifer enjoys merging function with form through aesthetically creative web designs. She has always had an appreciation for art and design, and now utilizes it to create functional experiences for users across the web. As a designer with Hangar 31, she aims to make the web a more engaging place for every user through her creativity, and artistic talent."
     ]
   }
 ];
