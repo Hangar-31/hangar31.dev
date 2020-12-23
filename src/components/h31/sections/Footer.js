@@ -131,7 +131,7 @@ export default () => (
                 text-transform: uppercase;
               `}
             >
-              Hangar 31 LLC - Copyright © 2019
+              Hangar 31 LLC - Copyright © 2020
             </Text1>
           </BottomBarItem>
 
