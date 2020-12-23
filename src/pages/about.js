@@ -41,7 +41,7 @@ const bios = [
     image: <ImgTeamAndrew />,
     intro: '"DREAMS BECOME REALITY WHEN PURSUED BEYOND THE HORIZON."',
     bio: [
-      "Andrew is our In-House designer and one of the Co-Founders of Hangar 31. He comes with a background in fine arts, digital design, and an enthusiasm for seeing visions brought to reality!"
+      "Andrew is our Creative Lead, and one of the Co-Founders of Hangar 31. He comes with a background in fine arts, digital design, and an enthusiasm for seeing visions brought to reality."
     ]
   },
   {
