@@ -317,62 +317,6 @@ export default class Form1 extends React.Component {
 
         {/* Regarding */}
         <Fieldset>
-          <P
-            css={css`
-              grid-column: span 4;
-            `}
-          >
-            <Select
-              required
-              id="form-subject"
-              onChange={this.handleChange}
-              name="Subject"
-            >
-              <option value="" />
-              <option value="I Would Like To Schedule A Free Consultation.">
-                I Would Like To Schedule A Free Consultation.
-              </option>
-              <optgroup label="Websites">
-                <option value="I Want A Website For My Business.">
-                  I Want A Website For My Business.
-                </option>
-                <option value="My Website Needs An Overhaul.">
-                  My Website Needs An Overhaul.
-                </option>
-                <option value="I Need To Convert My Website To Something Faster and More Secure.">
-                  I Need To Convert My Website To Something Faster and More
-                  Secure.
-                </option>
-                <option value="I Need A Web Team To Grow With Long-Term.">
-                  I Need A Web Team To Grow With Long-Term.
-                </option>
-              </optgroup>
-
-              <optgroup label="Questions">
-                <option value="I Don't Have An Online Presence, Where Do I Begin?">
-                  I Don&apos;t Have An Online Presence, Where Do I Begin?
-                </option>
-                <option value="Do I Need A Website?">
-                  Do I Need A Website?
-                </option>
-              </optgroup>
-
-              <optgroup label="General">
-                <option value="I Wanted To Leave A Testimonial.">
-                  I Wanted To Leave A Testimonial.
-                </option>
-                <option value="Just Wanted To Say Hi.">
-                  Just Wanted To Say Hi.
-                </option>
-                <option value="Something Else...">Something Else...</option>
-              </optgroup>
-            </Select>
-
-            <Label htmlFor="form-subject">
-              Hello, I Would Like To Inquire About... *
-            </Label>
-          </P>
-
           {/* Full Name */}
           <P
             css={css`
@@ -388,7 +332,7 @@ export default class Form1 extends React.Component {
               value={Name}
             />
 
-            <Label htmlFor="form-name">What&#39;s Your Name? *</Label>
+            <Label htmlFor="form-name">Name*</Label>
           </P>
 
           {/* Email */}
@@ -406,7 +350,7 @@ export default class Form1 extends React.Component {
               value={Email}
             />
 
-            <Label htmlFor="form-email">Best Email To Contact? *</Label>
+            <Label htmlFor="form-email">Email*</Label>
           </P>
 
           {/* Phone */}
@@ -423,7 +367,7 @@ export default class Form1 extends React.Component {
               value={Phone}
             />
 
-            <Label htmlFor="form-phone">Best Number To Call?</Label>
+            <Label htmlFor="form-phone">Phone</Label>
           </P>
 
           {/* Location */}
@@ -443,7 +387,7 @@ export default class Form1 extends React.Component {
               `}
             />
 
-            <Label htmlFor="form-location">Where Are You Located?</Label>
+            <Label htmlFor="form-location">Location</Label>
           </P>
 
           {/* Company Name */}
@@ -460,9 +404,7 @@ export default class Form1 extends React.Component {
               value={Company}
             />
 
-            <Label htmlFor="form-company">
-              What&#39;s Your Company&#39;s Name?
-            </Label>
+            <Label htmlFor="form-company">Company</Label>
           </P>
 
           {/* Current Website */}
@@ -479,9 +421,52 @@ export default class Form1 extends React.Component {
               value={CurrentWebsite}
             />
 
-            <Label htmlFor="form-current-website">
-              What&#39;s Your Current Website?
-            </Label>
+            <Label htmlFor="form-current-website">Website</Label>
+          </P>
+
+          <P
+            css={css`
+              grid-column: span 4;
+            `}
+          >
+            <Select
+              required
+              id="form-subject"
+              onChange={this.handleChange}
+              name="Subject"
+            >
+              <option value="" />
+              <option value="I Would Like To Schedule A Free Consultation.">
+                I Would Like To Schedule A Free Consultation.
+              </option>
+              <optgroup label="Services">
+                <option value="Discovery and Strategy">
+                  Discovery and Strategy
+                </option>
+                <option value="Web Applications">Web Applications</option>
+                <option value="User Based Applications">
+                  User Based Applications
+                </option>
+                <option value="Business or Personal Apps">
+                  Business or Personal Apps
+                </option>
+                <option value="Websites">Websites</option>
+                <option value="Automations">Automations</option>
+                <option value="API Layers">API Layers</option>
+              </optgroup>
+
+              <optgroup label="General">
+                <option value="I Wanted To Leave A Testimonial.">
+                  I Wanted To Leave A Testimonial.
+                </option>
+                <option value="Just Wanted To Say Hi.">
+                  Just Wanted To Say Hi.
+                </option>
+                <option value="Something Else...">Something Else...</option>
+              </optgroup>
+            </Select>
+
+            <Label htmlFor="form-subject">Subject*</Label>
           </P>
 
           {/* Messages */}
@@ -499,7 +484,7 @@ export default class Form1 extends React.Component {
               value={Message}
             />
 
-            <Label htmlFor="form-message">Tell Us How Can We Help! *</Label>
+            <Label htmlFor="form-message">Message*</Label>
           </P>
 
           {/* Submit Button */}
