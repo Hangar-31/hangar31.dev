@@ -335,6 +335,23 @@ export default class Form1 extends React.Component {
             <Label htmlFor="form-name">Name*</Label>
           </P>
 
+          {/* Company Name */}
+          <P
+            css={css`
+              grid-column: span 2;
+            `}
+          >
+            <Input
+              id="form-company"
+              onChange={this.handleChange}
+              type="text"
+              name="Company"
+              value={Company}
+            />
+
+            <Label htmlFor="form-company">Company</Label>
+          </P>
+
           {/* Email */}
           <P
             css={css`
@@ -388,23 +405,6 @@ export default class Form1 extends React.Component {
             />
 
             <Label htmlFor="form-location">Location</Label>
-          </P>
-
-          {/* Company Name */}
-          <P
-            css={css`
-              grid-column: span 2;
-            `}
-          >
-            <Input
-              id="form-company"
-              onChange={this.handleChange}
-              type="text"
-              name="Company"
-              value={Company}
-            />
-
-            <Label htmlFor="form-company">Company</Label>
           </P>
 
           {/* Current Website */}
