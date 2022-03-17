@@ -15,7 +15,7 @@ import ImgAppTestDayPrep from "../../images/apps/ImgAppTestDayPrep";
 const data = [
   {
     title: "Test Day Prep",
-    website: "https://test-day-prep-frontend-pr-1.onrender.com/",
+    website: "https://testdayprep.com/",
     image: <ImgAppTestDayPrep />
   },
   {
