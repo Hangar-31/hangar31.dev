@@ -37,7 +37,7 @@ export default ({ bios }) => (
             }
           `}
         >
-          The Team
+          The Founder
         </Title1>
 
         <CardTeammates bios={bios} />
