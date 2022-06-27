@@ -15,7 +15,7 @@ import ImgTeamMatthew from "../components/images/team/ImgTeamMatthew";
 const bios = [
   {
     name: "Matthew Pezzente",
-    title: "CEO / Project Manager",
+    title: "Web Developer | Project Manager",
     image: <ImgTeamMatthew />,
     intro:
       '"TIME IS VALUABLE, SO LET’S SPEND IT ON THE THINGS THAT MATTER MOST, LIKE THE PEOPLE AROUND US."',
