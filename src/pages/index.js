@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <PageWrapperFade>
       <SEO
-        title="Web Application Development"
+        title="Web Consulting & Development"
         description="We assist companies, organizations and individuals develop web solutions that save time, scale for growth, and solve business problems. We accomplish this by translating visions and ideas into tailored, web based tools that utilize cutting-edge technology. Get started today a free consultation!"
       />
 
