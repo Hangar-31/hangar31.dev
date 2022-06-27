@@ -46,7 +46,7 @@ export default () => (
         }
       `}
     >
-      Web Application Development
+      Web Consulting & Development
     </TitleLogo>
   </Container>
 );
