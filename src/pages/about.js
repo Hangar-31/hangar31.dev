@@ -20,7 +20,7 @@ const bios = [
     intro:
       '"TIME IS VALUABLE, SO LET’S SPEND IT ON THE THINGS THAT MATTER MOST, LIKE THE PEOPLE AROUND US."',
     bio: [
-      "My name is Matt, I am a Web Developer and Project Manager. I created Hangar 31 so I could use my skills and knowledge to help business succeed no matter what size or scale. One thing I enjoy most, is helping people make better businesses decisions by teaching them how to leverage web technology to achieve their goals."
+      "My name is Matt, I am a Web Developer and Project Manager. I created Hangar 31 so I could use my skills and knowledge to help businesses succeed no matter what size or scale. One thing I enjoy most, is helping people make better business decisions by teaching them how to leverage web technology to achieve their goals."
     ]
   }
 ];
